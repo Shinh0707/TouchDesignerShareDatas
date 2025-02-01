@@ -10,11 +10,12 @@ Plugins内のファイルを以下のディレクトリに配置
 
 ## 各プラグインの説明
 **⚠プラグインを使うときは、念の為プロジェクトのバックアップを取っておいてください。⚠**  
-- MatMul  
+- MatMul　(MatMulPlugin.dll)  
 	CHOP同士の行列積を計算するプラグイン  
 	- 使用用途  
 		２つのCHOPの関連性の計算/１次元のCHOPのデータを２次元に拡張する
-- ValueBarTOP
+- ValueBarTOP　(ValueBarTOPPlugin.dll)  
+	'opencv_world4100.dll'と一緒に利用するので、'opencv_world4100.dll'も同じディレクトリに入れておく。  
 	CHOPの値をグラフとしてTOPに可視化するプラグイン  
 	- 使用用途  
 		スペクトラムの可視化/音声信号の可視化  
