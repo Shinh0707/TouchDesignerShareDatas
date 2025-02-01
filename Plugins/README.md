@@ -1,4 +1,5 @@
 # Pluginsの使い方
+詳細は[https://docs.derivative.ca/Custom_Operators](https://docs.derivative.ca/Custom_Operators)を確認してください。  
 Plugins内のファイルを以下のディレクトリに配置  
 - Windows  
 	Documents/Derivative/Plugins  
@@ -8,6 +9,7 @@ Plugins内のファイルを以下のディレクトリに配置
 	/Users/<username>/Library/Application Support/Derivative/TouchDesigner099/Plugins  
 
 ## 各プラグインの説明
+**⚠プラグインを使うときは、念の為プロジェクトのバックアップを取っておいてください。⚠**  
 - MatMul  
 	CHOP同士の行列積を計算するプラグイン  
 	- 使用用途  
