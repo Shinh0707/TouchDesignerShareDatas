@@ -1,22 +1,22 @@
 # Touch Designer Plugins  
 自作したTouchDesigner用の追加機能などを置いてます.  
 - [Palette](#palette)  
-	- [導入](#導入-1)  
-	- [説明](#説明-1)  
+	- [導入](#palette導入)  
+	- [説明](#palette説明)  
 - [Plugin](#plugin)  
-	- [導入](#導入-2)  
-	- [説明](#説明-2)  
+	- [導入](#plugin導入)  
+	- [説明](#plugin説明)  
   
 ## Palette  
 TouchDesignerの左側のタブにあるプリセットみたいなやつです.  
 ![Paletteタブ](doc/Palette.png "Paletteの画像")  
   
-### 導入  
+### Palette導入  
 [Pelettes](Pelettes)の中から使いたい`.tox`ファイルを選んでプロジェクト内にDrag＆Dropで使うことができます.  
   
 *詳細は[https://derivative.ca/UserGuide/Palette](https://derivative.ca/UserGuide/Palette)を確認してください*  
   
-### 説明  
+### Palette説明  
 1. [mandrauv](Palette/mandrauv.tox)  
 	曼荼羅模様(シンメトリーな幾何学模様)を簡単に作れます.  
 	使用例: [MandraExample.toe](Projects/MandraExample.toe)  
@@ -27,10 +27,10 @@ TouchDesignerのオリジナルノードみたいなやつです.
 上手く導入できるとOperatorの選択ウィンドウの`Custom`タブに追加されます.  
 ![プラグイン導入後のOperator選択ウィンドウ](doc/Plugin.png "Pluginの画像")  
   
-### 導入  
+### Plugin導入  
 - Windows  
 	[Plugins/Windows](Plugins/Windows)内から使いたいプラグイン(`.dll`)ファイルを選び  
-	`Documents/Derivative/Plugins` 
+	`Documents/Derivative/Plugins`  
 	もしくは、  
 	`C:/Users/<username>/Documents/Derivative/Plugins`  
 	内に配置する  
@@ -41,7 +41,7 @@ TouchDesignerのオリジナルノードみたいなやつです.
   
 *詳細は[https://docs.derivative.ca/Custom_Operators](https://docs.derivative.ca/Custom_Operators)を確認してください*  
   
-### 説明  
+### Plugin説明  
 1. `DotCHOP`  
 	CHOP同士の内積をとります.  
 	スペクトラム同士の内積をとって可視化すると面白い画像になります.  
