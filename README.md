@@ -12,7 +12,7 @@ TouchDesignerの左側のタブにあるプリセットみたいなやつです.
 ![Paletteタブ](doc/Palette.png "Paletteの画像")  
   
 ### Palette導入  
-[Pelettes](Pelettes)の中から使いたい`.tox`ファイルを選んでプロジェクト内にDrag＆Dropで使うことができます.  
+[Palettes](Palettes)の中から使いたい`.tox`ファイルを選んでプロジェクト内にDrag＆Dropで使うことができます.  
   
 *詳細は[https://derivative.ca/UserGuide/Palette](https://derivative.ca/UserGuide/Palette)を確認してください*  
   
