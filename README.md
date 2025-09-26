@@ -18,9 +18,11 @@ TouchDesignerの左側のタブにあるプリセットみたいなやつです.
   
 ### Palette説明  
 1. [mandrauv](Palette/mandrauv.tox)  
-	曼荼羅模様(シンメトリーな幾何学模様)を簡単に作れます.  
+	曼荼羅模様(シンメトリーな幾何学模様)を簡単に作れるUV.  
 	使用例: [MandraExample.toe](Projects/MandraExample.toe)  
-  
+2. [pinholeRadtan](Palette/pinholeRadtan.tox)  
+	画像の一部を膨張/縮小するUV.  
+	使用例: [PinholeRadtanExample.toe](Projects/PinholeRadtanExample.toe)  
   
 ## Plugin  
 TouchDesignerのオリジナルノードみたいなやつです.  
