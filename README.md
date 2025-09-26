@@ -6,6 +6,8 @@
 - [Plugin](#plugin)  
 	- [導入](#plugin導入)  
 	- [説明](#plugin説明)  
+		- [CHOPs](#chops)
+		- [TOPs](#tops)
   
 ## Palette  
 TouchDesignerの左側のタブにあるプリセットみたいなやつです.  
@@ -44,14 +46,19 @@ TouchDesignerのオリジナルノードみたいなやつです.
 *詳細は[https://docs.derivative.ca/Custom_Operators](https://docs.derivative.ca/Custom_Operators)を確認してください*  
   
 ### Plugin説明  
+#### CHOPs
 1. `DotCHOP`  
 	CHOP同士の内積をとります.  
 	スペクトラム同士の内積をとって可視化すると面白い画像になります.  
-2. `BasicBlockGlitchTOP`  
+2. `GranularCHOP`
+	CHOPに簡易的なグラニュラー効果をかけます.  
+	使用例: [TouchDesigner Plugin "Granular"](https://youtu.be/0uRVfFLauyg "TouchDesigner Plugin Granular YouTube")  
+#### TOPs
+1. `BasicBlockGlitchTOP`  
 	画像をタイル状にバラバラにします. 逐次動かすこともできます.  
 	使用例: [BasicBlockGlitchTOPExample.toe](Projects/BasicBlockGlitchTOPExample.toe)  
 	![BasicBlockGlitchTOPの適用後](doc/BasicBlockGlitchTOPExample.png "BasicBlockGlitchTOP適用後")  
-3. `BlockNoiseTOP`  
+2. `BlockNoiseTOP`  
 	四角いノイズ乗っけるだけです. `TOP > Noise`でもいいと思います.  
 	使用例: [BlockNoiseTOPExample.toe](Projects/BlockNoiseTOPExample.toe)  
 	![BlockNoiseTOPの適用後](doc/BlockNoiseTOPExample.png "BlockNoiseTOP適用後")  
