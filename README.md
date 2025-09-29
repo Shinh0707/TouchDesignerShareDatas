@@ -18,13 +18,19 @@ TouchDesignerの左側のタブにあるプリセットみたいなやつです.
   
 *詳細は[https://derivative.ca/UserGuide/Palette](https://derivative.ca/UserGuide/Palette)を確認してください*  
   
-### Palette説明  
-1. [mandrauv](Palette/mandrauv.tox)  
-	曼荼羅模様(シンメトリーな幾何学模様)を簡単に作れるUV.  
+### Palette説明
+1. [identifyUV](Palette/identifyUV.tox)  
+	初期状態のUVです.
+2. [mandrauv](Palette/mandrauv.tox)  
+	曼荼羅模様(シンメトリーな幾何学模様)を簡単に作れるUVです.  
 	使用例: [MandraExample.toe](Projects/MandraExample.toe)  
-2. [pinholeRadtan](Palette/pinholeRadtan.tox)  
-	画像の一部を膨張/縮小するUV.  
+3. [pinholeRadtan](Palette/pinholeRadtan.tox)  
+	画像の一部を膨張/縮小するUVです.  
 	使用例: [PinholeRadtanExample.toe](Projects/PinholeRadtanExample.toe)  
+4. [lineDrawer](Palette/lineDrawer.tox)  
+	CHOPで座標と色を指定して線を描画します.  
+	![lineDrawer](doc/LineDrawer.png)  
+	使用例: [LineDrawerExample.toe](Projects/LineDrawerExample.toe "LineDrawerの使用例")  
   
 ## Plugin  
 TouchDesignerのオリジナルノードみたいなやつです.  
