@@ -6,8 +6,8 @@
 - [Plugin](#plugin)  
 	- [導入](#plugin導入)  
 	- [説明](#plugin説明)  
-		- [CHOPs](#chops)
-		- [TOPs](#tops)
+		- [CHOP](#chop)
+		- [TOP](#top)
   
 ## Palette  
 TouchDesignerの左側のタブにあるプリセットみたいなやつです.  
@@ -46,14 +46,19 @@ TouchDesignerのオリジナルノードみたいなやつです.
 *詳細は[https://docs.derivative.ca/Custom_Operators](https://docs.derivative.ca/Custom_Operators)を確認してください*  
   
 ### Plugin説明  
-#### CHOPs
+#### CHOP
 1. `DotCHOP`  
 	CHOP同士の内積をとります.  
-	スペクトラム同士の内積をとって可視化すると面白い画像になります.  
+	使用例: [DotProductCHOPExample.toe](Projects/DotProductCHOPExample.toe "DotProductCHOP使用例")  
 2. `GranularCHOP`
 	CHOPに簡易的なグラニュラー効果をかけます.  
-	使用例: [TouchDesigner Plugin "Granular"](https://youtu.be/0uRVfFLauyg "TouchDesigner Plugin Granular YouTube")  
-#### TOPs
+	２段階かけるといい感じになります.  
+	使用例1: [TouchDesigner Plugin "Granular"](https://youtu.be/0uRVfFLauyg "TouchDesigner Plugin Granular YouTube")  
+	使用例2: [GranularCHOPExample.toe](Projects/GranularCHOPExample.toe "GranularCHOP使用例")  
+3. `HistogramCHOP`  
+	CHOPのヒストグラムを計算します.  
+	使用例: [HistogramCHOPExample.toe](Projects/HistogramCHOPExample.toe "HistogramCHOP使用例")  
+#### TOP
 1. `BasicBlockGlitchTOP`  
 	画像をタイル状にバラバラにします. 逐次動かすこともできます.  
 	使用例: [BasicBlockGlitchTOPExample.toe](Projects/BasicBlockGlitchTOPExample.toe)  
@@ -67,7 +72,7 @@ TouchDesignerのオリジナルノードみたいなやつです.
 	使用例: [BitCrushTOPExample.toe](Projects/BitCrushTOPExample.toe)  
 	![BitCrushTOPの適用後](doc/BitCrushTOPExample.png "BitCrushTOP適用後")  
 4. `PixcelSorterGlitchTOP`  
-	Kim Asendorf氏の[ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSort)を参考に, PixcelSortingをTouchDesignerのプラグイン化したものです. 最適化を怠ってますので画質によっては結構重いです (すみません)  
+	Kim Asendorf氏の[ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSort)を参考に, PixcelSortingをTouchDesignerのプラグイン化したものです.(Black,Brightness,R,G,B,RGBMaxのモードを選択できます)  
 	使用例: [PixcelSorterGlitchTOPExample.toe](Projects/PixcelSorterGlitchTOPExample.toe)  
 	![PixcelSorterGlitchTOPの適用後](doc/PixcelSorterGlitchTOPExample.png "PixcelSorterGlitchTOP適用後")  
 5. `FlipnoteTOP`  
