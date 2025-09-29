@@ -29,8 +29,8 @@ TouchDesignerの左側のタブにあるプリセットみたいなやつです.
 	使用例: [PinholeRadtanExample.toe](Projects/PinholeRadtanExample.toe)  
 4. [lineDrawer](Palette/lineDrawer.tox)  
 	CHOPで座標と色を指定して線を描画します.  
-	![lineDrawer](doc/LineDrawer.png)  
 	使用例: [LineDrawerExample.toe](Projects/LineDrawerExample.toe "LineDrawerの使用例")  
+	![lineDrawer](doc/LineDrawer.png)  
   
 ## Plugin  
 TouchDesignerのオリジナルノードみたいなやつです.  
