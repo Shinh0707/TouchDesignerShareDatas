@@ -87,3 +87,7 @@ TouchDesignerのオリジナルノードみたいなやつです.
 	Operatorのパラメータ設定画面の`Common > Viewer Smoothness`を`Nearist Pixcel`にすると, 更に見た目が「うごくメモ帳」らしくなります.  
 	使用例: [FlipnoteTOPExample.toe](Projects/FlipnoteTOPExample.toe)  
 	![FlipnoteTOPの適用後](doc/FlipnoteTOPExample.png "FlipnoteTOP適用後")
+6. `InstanceTOP`  
+	入力画像を複製してCHOPで変形して重ねるプラグイン.  
+	使用例: [InstanceTOPExample.toe](Projects/InstanceTOPExample.toe)  
+	![InstanceTOPの適用後](doc/InstanceTOPExample.png "FlipnoteTOP適用後")
