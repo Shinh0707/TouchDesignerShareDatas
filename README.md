@@ -90,4 +90,4 @@ TouchDesignerのオリジナルノードみたいなやつです.
 6. `InstanceTOP`  
 	入力画像を複製してCHOPで変形して重ねるプラグイン.  
 	使用例: [InstanceTOPExample.toe](Projects/InstanceTOPExample.toe)  
-	![InstanceTOPの適用後](doc/InstanceTOPExample.png "FlipnoteTOP適用後")
+	![InstanceTOPの適用後](doc/InstanceTOP.png "FlipnoteTOP適用後")
