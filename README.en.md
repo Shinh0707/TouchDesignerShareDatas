@@ -24,9 +24,9 @@ You can use a `.tox` file from [Palettes](Palettes) by dragging and dropping it 
 ### Palette Description
 1. [identifyUV](Palette/identifyUV.tox)  
     This is the initial UV state.
-2. [mandrauv](Palette/mandrauv.tox)  
+2. [mandalaUV](Palette/mandalaUV.tox)  
     This UV easily creates mandala patterns (symmetrical geometric patterns).  
-    Usage Example: [MandraExample.toe](Projects/MandraExample.toe)  
+    Usage Example: [MandalaExample.toe](Projects/MandalaExample.toe)  
 3. [pinholeRadtan](Palette/pinholeRadtan.tox)  
     This UV expands/contracts a part of an image.  
     Usage Example: [PinholeRadtanExample.toe](Projects/PinholeRadtanExample.toe)  
