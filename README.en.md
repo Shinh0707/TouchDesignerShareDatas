@@ -19,7 +19,9 @@ This is like the presets found in the left tab of TouchDesigner.
 ### Palette Installation  
 You can use a `.tox` file from [Palettes](Palettes) by dragging and dropping it into your project.  
   
-*For details, please refer to [https://derivative.ca/UserGuide/Palette](https://derivative.ca/UserGuide/Palette)* ### Palette Description
+*For details, please refer to [https://derivative.ca/UserGuide/Palette](https://derivative.ca/UserGuide/Palette)* 
+
+### Palette Description
 1. [identifyUV](Palette/identifyUV.tox)  
     This is the initial UV state.
 2. [mandrauv](Palette/mandrauv.tox)  
