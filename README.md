@@ -64,6 +64,11 @@ TouchDesignerのオリジナルノードみたいなやつです.
 3. `HistogramCHOP`  
 	CHOPのヒストグラムを計算します.  
 	使用例: [HistogramCHOPExample.toe](Projects/HistogramCHOPExample.toe "HistogramCHOP使用例")  
+4. `MIDIFileInCHOP`  
+	MIDIファイルを手軽に読めます.(`MIDI In`より機能が少なく、簡単に使えます)  
+5. `SoundFontSynthCHOP`  
+	SoundFontファイルを再生します.`MIDIFileInCHOP`と一緒に使うことを想定しています.  
+  
 #### TOP
 1. `BasicBlockGlitchTOP`  
 	画像をタイル状にバラバラにします. 逐次動かすこともできます.  
