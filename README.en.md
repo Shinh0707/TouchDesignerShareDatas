@@ -48,7 +48,9 @@ If installed correctly, they will be added to the `Custom` tab of the Operator s
     Select the desired plugin (`.plugin`) file from [Plugins/Mac](Plugins/Mac) and place it in  
     `/Users/<username>/Library/Application Support/Derivative/TouchDesigner099/Plugins`  
   
-*For details, please refer to [https://docs.derivative.ca/Custom_Operators](https://docs.derivative.ca/Custom_Operators)* ### Plugin Description  
+*For details, please refer to [https://docs.derivative.ca/Custom_Operators](https://docs.derivative.ca/Custom_Operators)* 
+
+### Plugin Description  
 #### CHOP
 1. `DotCHOP`  
     Calculates the dot product of two CHOPs.  
