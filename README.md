@@ -1,5 +1,8 @@
+日本語 | [English](./README.en.md)
+
 # Touch Designer Plugins  
 自作したTouchDesigner用の追加機能などを置いてます.  
+Macを使っている関係上、DLLについては動作未検証です.  
 - [Palette](#palette)  
 	- [導入](#palette導入)  
 	- [説明](#palette説明)  
