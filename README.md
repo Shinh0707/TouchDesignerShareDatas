@@ -71,6 +71,10 @@ TouchDesignerのオリジナルノードみたいなやつです.
 	MIDIファイルを手軽に読めます.(`MIDI In`より機能が少なく、簡単に使えます)  
 5. `SoundFontSynthCHOP`  
 	SoundFontファイルを再生します.`MIDIFileInCHOP`と一緒に使うことを想定しています.  
+6. `BLEInCHOP`  
+	BLE（Bluetooth Low Energy）デバイスからカンマ区切りの数値列（例: `123,0.5,3.212`）としてフォーマットされた
+	ASCII文字列を受信し、それらをCHOPチャンネルとして出力します.  
+	[SimpleBLE](https://github.com/simpleble/simpleble)ライブラリを使用しています.
   
 #### TOP
 1. `BasicBlockGlitchTOP`  

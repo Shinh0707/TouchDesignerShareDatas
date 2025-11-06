@@ -69,6 +69,10 @@ If installed correctly, they will be added to the `Custom` tab of the Operator s
     Easily reads MIDI files (fewer features and simpler to use than `MIDI In`).  
 5. `SoundFontSynthCHOP`  
     Plays SoundFont files. Intended to be used with `MIDIFileInCHOP`.  
+6. `BLEInCHOP`  
+    Receives an ASCII string formatted as a comma-separated numerical string (e.g., `123,0.5,3.212`)  
+    from a BLE (Bluetooth Low Energy) device and outputs them as CHOP channels.  
+    Uses the [SimpleBLE](https://github.com/simpleble/simpleble) library.
   
 #### TOP
 1. `BasicBlockGlitchTOP`  
