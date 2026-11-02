@@ -2,7 +2,8 @@
 
 # TouchDesigner Plugins  
 This section contains custom additional features for TouchDesigner.  
-Since I use a Mac, the operation of DLLs has not been verified.  
+
+**Downloads, descriptions and parameter references for the plugins are on the site → [TouchDesigner Plugins](https://shinh0707.github.io/TouchDesignerShareDatas/)** (Japanese)  
 - [Palette](#palette)  
     - [Installation](#palette-installation)  
     - [Description](#palette-description)  
@@ -22,15 +23,15 @@ You can use a `.tox` file from [Palettes](Palettes) by dragging and dropping it 
 *For details, please refer to [https://derivative.ca/UserGuide/Palette](https://derivative.ca/UserGuide/Palette)* 
 
 ### Palette Description
-1. [identifyUV](Palette/identifyUV.tox)  
+1. [identifyUV](Palettes/identifyUV.tox)  
     This is the initial UV state.
-2. [mandalaUV](Palette/mandalaUV.tox)  
+2. [mandalaUV](Palettes/mandalaUV.tox)  
     This UV easily creates mandala patterns (symmetrical geometric patterns).  
     Usage Example: [MandalaExample.toe](Projects/MandalaExample.toe)  
-3. [pinholeRadtan](Palette/pinholeRadtan.tox)  
+3. [pinholeRadtan](Palettes/pinholeRadtan.tox)  
     This UV expands/contracts a part of an image.  
     Usage Example: [PinholeRadtanExample.toe](Projects/PinholeRadtanExample.toe)  
-4. [lineDrawer](Palette/lineDrawer.tox)  
+4. [lineDrawer](Palettes/lineDrawer.tox)  
     Draws lines by specifying coordinates and colors with CHOP.  
     Usage Example: [LineDrawerExample.toe](Projects/LineDrawerExample.toe "LineDrawer Usage Example")  
     ![lineDrawer](doc/LineDrawer.png)  
@@ -41,63 +42,69 @@ If installed correctly, they will be added to the `Custom` tab of the Operator s
 ![Operator Selection Window after Plugin Installation](doc/Plugin.png "Plugin Image")  
   
 ### Plugin Installation  
-- Windows  
-    Select the desired plugin (`.dll`) file from [Plugins/Windows](Plugins/Windows) and place it in  
-    `Documents/Derivative/Plugins`  
-    or  
-    `C:/Users/<username>/Documents/Derivative/Plugins`  
-- Mac  
-    Select the desired plugin (`.plugin`) file from [Plugins/Mac](Plugins/Mac) and place it in  
-    `/Users/<username>/Library/Application Support/Derivative/TouchDesigner099/Plugins`  
+1. On the [download page](https://shinh0707.github.io/TouchDesignerShareDatas/downloads/) (or [Releases](https://github.com/Shinh0707/TouchDesignerShareDatas/releases/latest)), pick the zip of the plugin you want for your OS.  
+    `TDPlugins-<version>-<mac|windows>.zip` contains all plugins.  
+    New versions are shown as "様子見中" (on probation) for their first 7 days; unless you are in a hurry, take the recommended ("おすすめ版") one.  
+2. Unzip it and place the `.plugin` (Mac) / `.dll` (Windows) in  
+    - Windows: `Documents/Derivative/Plugins` (`C:/Users/<username>/Documents/Derivative/Plugins`)  
+    - Mac: `/Users/<username>/Library/Application Support/Derivative/TouchDesigner099/Plugins`  
+3. Restart TouchDesigner.  
+
+The Windows builds are compiled and automatically tested on Windows. (The DLLs that used to be in `Plugins/Windows` were actually Mac binaries that did not work on Windows, so they were removed.)  
+`Plugins/Mac` holds old builds; get the latest from the download page above.  
   
 *For details, please refer to [https://docs.derivative.ca/Custom_Operators](https://docs.derivative.ca/Custom_Operators)* 
 
 ### Plugin Description  
 #### CHOP
-1. `DotCHOP`  
+1. [`DotCHOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/DotCHOP/)  
     Calculates the dot product of two CHOPs.  
     Usage Example: [DotProductCHOPExample.toe](Projects/DotProductCHOPExample.toe "DotProductCHOP Usage Example")  
-2. `GranularCHOP`
+2. [`GranularCHOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/GranularCHOP/)
     Applies a simple granular effect to a CHOP.  
     Applying it twice yields a good result.  
     Usage Example 1: [TouchDesigner Plugin "Granular"](https://youtu.be/0uRVfFLauyg "TouchDesigner Plugin Granular YouTube")  
     Usage Example 2: [GranularCHOPExample.toe](Projects/GranularCHOPExample.toe "GranularCHOP Usage Example")  
-3. `HistogramCHOP`  
+3. [`HistogramCHOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/HistogramCHOP/)  
     Calculates the histogram of a CHOP.  
     Usage Example: [HistogramCHOPExample.toe](Projects/HistogramCHOPExample.toe "HistogramCHOP Usage Example")  
-4. `MIDIFileInCHOP`  
+4. [`MIDIFileInCHOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/MidiFileInCHOP/)  
     Easily reads MIDI files (fewer features and simpler to use than `MIDI In`).  
-5. `SoundFontSynthCHOP`  
+5. [`SoundFontSynthCHOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/SoundFontSynthCHOP/)  
     Plays SoundFont files. Intended to be used with `MIDIFileInCHOP`.  
-6. `BLEInCHOP`  
+6. [`BLEInCHOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/BLEInCHOP/)  
     Receives an ASCII string formatted as a comma-separated numerical string (e.g., `123,0.5,3.212`)  
     from a BLE (Bluetooth Low Energy) device and outputs them as CHOP channels.  
-    Uses the [SimpleBLE](https://github.com/simpleble/simpleble) library.
+    Uses the [SimpleBLE](https://github.com/simpleble/simpleble) library. (Mac only)
+7. [`LifeGameCHOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/LifeGameCHOP/)  
+    Runs Conway's Game of Life and outputs each row of the board as a channel. Random spawn/death probabilities can be set.  
+8. [`Im2ColCHOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/Im2ColCHOP/) / [`Col2ImCHOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/Col2ImCHOP/)  
+    Rearranges CHOP values laid out as an image into convolution patches (im2col), and back (col2im).  
   
 #### TOP
-1. `BasicBlockGlitchTOP`  
+1. [`BasicBlockGlitchTOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/BasicBlockGlitchTOP/)  
     Breaks an image into tiles. Can also be animated sequentially.  
     Usage Example: [BasicBlockGlitchTOPExample.toe](Projects/BasicBlockGlitchTOPExample.toe)  
     ![BasicBlockGlitchTOP Applied](doc/BasicBlockGlitchTOPExample.png "BasicBlockGlitchTOP After Application")  
-2. `BlockNoiseTOP`  
+2. [`BlockNoiseTOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/BlockNoiseTOP/)  
     Simply adds square noise. `TOP > Noise` might also work.  
     Usage Example: [BlockNoiseTOPExample.toe](Projects/BlockNoiseTOPExample.toe)  
     ![BlockNoiseTOP Applied](doc/BlockNoiseTOPExample.png "BlockNoiseTOP After Application")  
-3. `BitCrushTOP`  
+3. [`BitCrushTOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/BitCrushTOP/)  
     Quantizes image colors by bit. Can be used to express older video aesthetics.  
     Usage Example: [BitCrushTOPExample.toe](Projects/BitCrushTOPExample.toe)  
     ![BitCrushTOP Applied](doc/BitCrushTOPExample.png "BitCrushTOP After Application")  
-4. `PixcelSorterGlitchTOP`  
+4. [`PixcelSorterGlitchTOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/PixcelSorterGlitchTOP/)  
     Inspired by Kim Asendorf's [ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSort), this is a TouchDesigner plugin for Pixel Sorting. (You can select modes such as Black, Brightness, R, G, B, RGBMax).  
     Usage Example: [PixcelSorterGlitchTOPExample.toe](Projects/PixcelSorterGlitchTOPExample.toe)  
     ![PixcelSorterGlitchTOP Applied](doc/PixcelSorterGlitchTOPExample.png "PixcelSorterGlitchTOP After Application")  
-5. `FlipnoteTOP`  
+5. [`FlipnoteTOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/FlipnoteTOP/)  
     Adjusts image quality, aspect ratio, and content to a "Flipnote Studio" style. You can choose between DSi/3DS versions.  
     As a reference, moving `DitherLevels` changes the density of dots, `DitherLumaThreshold` changes vibrancy, and Edge-related parameters control contour emphasis. No parameter set has been found that yields good results universally across many images.  
     In the Operator's parameter settings window, setting `Common > Viewer Smoothness` to `Nearest Pixel` further enhances the "Flipnote Studio" look.  
     Usage Example: [FlipnoteTOPExample.toe](Projects/FlipnoteTOPExample.toe)  
     ![FlipnoteTOP Applied](doc/FlipnoteTOPExample.png "FlipnoteTOP After Application")
-6. `InstanceTOP`  
+6. [`InstanceTOP`](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/InstanceTOP/)  
     A plugin that duplicates an input image, transforms it with CHOP, and overlays it.  
     Usage Example: [InstanceTOPExample.toe](Projects/InstanceTOPExample.toe)  
     ![InstanceTOP Applied](doc/InstanceTOP.png "FlipnoteTOP After Application")
