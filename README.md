@@ -50,8 +50,8 @@ TouchDesignerのオリジナルノードみたいなやつです.
 	- Mac: `/Users/<username>/Library/Application Support/Derivative/TouchDesigner099/Plugins`  
 3. TouchDesignerを再起動します.  
 
-Windows版はWindows上でビルドし, 自動テストを通したものです.(以前ここに置いていた `Plugins/Windows` の DLL は Mac 用のバイナリで, Windows では動かなかったため削除しました)  
-`Plugins/Mac` は旧版です. 最新版は上のダウンロードページから取得してください.  
+Mac版・Windows版とも, それぞれの OS 上でビルドし自動テストを通したものです.  
+以前このリポジトリの `Plugins` フォルダに置いていた旧版は削除しました(Windows 用の DLL が実際には Mac 用で動かなかったため). 上のダウンロードページから取得してください.  
   
 *詳細は[https://docs.derivative.ca/Custom_Operators](https://docs.derivative.ca/Custom_Operators)を確認してください*  
   

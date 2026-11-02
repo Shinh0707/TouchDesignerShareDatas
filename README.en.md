@@ -50,8 +50,8 @@ If installed correctly, they will be added to the `Custom` tab of the Operator s
     - Mac: `/Users/<username>/Library/Application Support/Derivative/TouchDesigner099/Plugins`  
 3. Restart TouchDesigner.  
 
-The Windows builds are compiled and automatically tested on Windows. (The DLLs that used to be in `Plugins/Windows` were actually Mac binaries that did not work on Windows, so they were removed.)  
-`Plugins/Mac` holds old builds; get the latest from the download page above.  
+Both the Mac and Windows builds are compiled and automatically tested on their own OS.  
+The old builds that used to be in this repository's `Plugins` folder were removed (the Windows DLLs were actually Mac binaries and did not work). Please get the plugins from the download page above.  
   
 *For details, please refer to [https://docs.derivative.ca/Custom_Operators](https://docs.derivative.ca/Custom_Operators)* 
 
