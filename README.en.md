@@ -44,7 +44,6 @@ If installed correctly, they will be added to the `Custom` tab of the Operator s
 ### Plugin Installation  
 1. On the [download page](https://shinh0707.github.io/TouchDesignerShareDatas/downloads/) (or [Releases](https://github.com/Shinh0707/TouchDesignerShareDatas/releases/latest)), pick the zip of the plugin you want for your OS.  
     `TDPlugins-<version>-<mac|windows>.zip` contains all plugins.  
-    New versions are shown as "様子見中" (on probation) for their first 7 days; unless you are in a hurry, take the recommended ("おすすめ版") one.  
 2. Unzip it and place the `.plugin` (Mac) / `.dll` (Windows) in  
     - Windows: `Documents/Derivative/Plugins` (`C:/Users/<username>/Documents/Derivative/Plugins`)  
     - Mac: `/Users/<username>/Library/Application Support/Derivative/TouchDesigner099/Plugins`  

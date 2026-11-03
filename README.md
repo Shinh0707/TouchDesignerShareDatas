@@ -44,7 +44,6 @@ TouchDesignerのオリジナルノードみたいなやつです.
 ### Plugin導入  
 1. [ダウンロードページ](https://shinh0707.github.io/TouchDesignerShareDatas/downloads/)(または [Releases](https://github.com/Shinh0707/TouchDesignerShareDatas/releases/latest))から、使いたいプラグインの zip を OS に合わせて選びます.  
 	全部まとめた `TDPlugins-<version>-<mac|windows>.zip` もあります.  
-	新しい版は公開から7日間「様子見中」として表示しています. 急ぎでなければ「おすすめ版」を選んでください.  
 2. zip を展開して, 中の `.plugin`(Mac)/ `.dll`(Windows)を次の場所に置きます.  
 	- Windows: `Documents/Derivative/Plugins`(`C:/Users/<username>/Documents/Derivative/Plugins`)  
 	- Mac: `/Users/<username>/Library/Application Support/Derivative/TouchDesigner099/Plugins`  
