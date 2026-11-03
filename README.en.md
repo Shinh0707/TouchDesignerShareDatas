@@ -5,8 +5,6 @@ This section contains custom additional features for TouchDesigner.
 
 **Downloads, descriptions and parameter references for the plugins are on the site → [TouchDesigner Plugins](https://shinh0707.github.io/TouchDesignerShareDatas/)** (Japanese)  
 - [Palette](#palette)  
-    - [Installation](#palette-installation)  
-    - [Description](#palette-description)  
 - [Plugin](#plugin)  
     - [Installation](#plugin-installation)  
     - [Description](#plugin-description)  
@@ -17,24 +15,14 @@ This section contains custom additional features for TouchDesigner.
 This is like the presets found in the left tab of TouchDesigner.  
 ![Palette Tab](doc/Palette.png "Palette Image")  
   
-### Palette Installation  
-You can use a `.tox` file from [Palettes](Palettes) by dragging and dropping it into your project.  
-  
-*For details, please refer to [https://derivative.ca/UserGuide/Palette](https://derivative.ca/UserGuide/Palette)* 
+<!-- tdp:palettes:begin (tools/palettes.py) -->
+Descriptions, parameters, examples and required plugins are on the [palette list on the site](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/) (Japanese). Drag a `.tox` into your network to use it. *For details, please refer to [https://derivative.ca/UserGuide/Palette](https://derivative.ca/UserGuide/Palette)*
 
-### Palette Description
-1. [identifyUV](Palettes/identifyUV.tox)  
-    This is the initial UV state.
-2. [mandalaUV](Palettes/mandalaUV.tox)  
-    This UV easily creates mandala patterns (symmetrical geometric patterns).  
-    Usage Example: [MandalaExample.toe](Projects/MandalaExample.toe)  
-3. [pinholeRadtan](Palettes/pinholeRadtan.tox)  
-    This UV expands/contracts a part of an image.  
-    Usage Example: [PinholeRadtanExample.toe](Projects/PinholeRadtanExample.toe)  
-4. [lineDrawer](Palettes/lineDrawer.tox)  
-    Draws lines by specifying coordinates and colors with CHOP.  
-    Usage Example: [LineDrawerExample.toe](Projects/LineDrawerExample.toe "LineDrawer Usage Example")  
-    ![lineDrawer](doc/LineDrawer.png)  
+- [identifyUV](Palettes/UV/identifyUV.tox) — 恒等 UV マップ（各ピクセルに自分の座標を入れた画像）を作る。r = u（左 0 → 右 1）、g = v（下 0 →… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/UV/identifyUV/), [使用例](Palettes/UV/identifyUVExample.toe))
+- [lineDrawer](Palettes/UV/lineDrawer.tox) — 点列 CHOP を折れ線として画像の上に描く（GLSL）。Start〜End で線全体の長さのどの区間を描くかを決めるの… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/UV/lineDrawer/), [使用例](Palettes/UV/lineDrawerExample.toe))
+- [mandalaUV](Palettes/UV/mandalaUV.tox) — 万華鏡（マンダラ）状の UV マップ。角度を鏡映しながら N 回くり返した値を r に、中心からの距離を折り返した値を … ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/UV/mandalaUV/), [使用例](Palettes/UV/mandalaUVExample.toe))
+- [pinholeRadtan](Palettes/UV/pinholeRadtan.tox) — カメラのレンズ歪み（Brown-Conrady モデル: 半径方向 k1, k2 と接線方向 p1, p2）をかけた U… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/UV/pinholeRadtan/), [使用例](Palettes/UV/pinholeRadtanExample.toe))
+<!-- tdp:palettes:end -->
   
 ## Plugin  
 These are like original nodes for TouchDesigner.  
