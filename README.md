@@ -133,10 +133,13 @@ TouchDesignerの左側のタブにあるプリセットみたいなやつです.
 - [SafeDivide](Palettes/Image/Math/SafeDivide.tox) — in1 ÷ in2 をチャンネルごとに、0 で割らないように出す（in1 × SafeInverse(in2)）。   ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Math/SafeDivide/), [使用例](Palettes/Image/Math/SafeDivideExample.toe))
 - [SafeDivideAlpha](Palettes/Image/Math/SafeDivideAlpha.tox) — in1 の RGBA 全部を、in2 のアルファで割る（0 で割らない）。重みの合計で割って平均にするときに使う。   ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Math/SafeDivideAlpha/), [使用例](Palettes/Image/Math/SafeDivideAlphaExample.toe))
 - [SafeInverse](Palettes/Image/Math/SafeInverse.tox) — 各チャンネルの逆数 1/x を、0 で割らないように出す: sign(x) / max(|x|, Eps)。0 は 0 … ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Math/SafeInverse/), [使用例](Palettes/Image/Math/SafeInverseExample.toe))
+- [SpectAE](Palettes/Learning/Audio/SpectAE.tox) — スペクトルを bin ごとに移動平均・分散で正規化してから 1 本のベクトルに並べ、MLP のオートエンコーダで自分自身… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Audio/SpectAE/), [使用例](Palettes/Learning/Audio/SpectAEExample.toe))
+- [SpectUNet](Palettes/Learning/Audio/SpectUNet.tox) — スペクトルを bin ごとに移動平均・分散で正規化し、1 次元の UNet(畳み込み)で自分自身を再構成するよう、毎フレ… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Audio/SpectUNet/), [使用例](Palettes/Learning/Audio/SpectUNetExample.toe))
 - [AutoVJ](Palettes/Learning/AutoVJ/AutoVJ.tox) — 映像と音から、VJ のパラメータ Nump 個（0〜1）を出し、その場で学習し続けるネット。目的は「映像の情報の差分」と… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/AutoVJ/AutoVJ/), [使用例](Palettes/Learning/AutoVJ/AutoVJExample.toe))
 - [AutoVJS](Palettes/Learning/AutoVJ/AutoVJS.tox) — 映像と音のスペクトルから、VJ のパラメータ Nump 個（0〜1）を出し、その場で学習し続けるネット。AutoVJ の… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/AutoVJ/AutoVJS/), [使用例](Palettes/Learning/AutoVJ/AutoVJSExample.toe))
 - [SimpleEmbedding](Palettes/Learning/Embedding/SimpleEmbedding.tox) — オーディオを Echo State Network（リザバー）に通して、埋め込みベクトルにする。入力の各チャンネルを、毎… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Embedding/SimpleEmbedding/), [使用例](Palettes/Learning/Embedding/SimpleEmbeddingExample.toe))
 - [SimpleImageEmbedding](Palettes/Learning/Embedding/SimpleImageEmbedding.tox) — 画像の各画素の色（R, G, B）を毎フレーム、小さなリザバー（SimpleEmbedding、3 次元）に通して、画素… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Embedding/SimpleImageEmbedding/), [使用例](Palettes/Learning/Embedding/SimpleImageEmbeddingExample.toe))
+- [UMAPEmbedding](Palettes/Learning/Embedding/UMAPEmbedding.tox) — Online parametric UMAP built from the AutoDiff components. E… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Embedding/UMAPEmbedding/), [使用例](Palettes/Learning/Embedding/UMAPEmbeddingExample.toe))
 - [InfoDiff](Palettes/Learning/Online/InfoDiff.tox) — 入力の「情報の差分」の大きさ。各要素（チャンネル × サンプルのそれぞれ）の 1 フレームの差分 Δx を、その要素のオ… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Online/InfoDiff/), [使用例](Palettes/Learning/Online/InfoDiffExample.toe))
 - [OnlineGHA](Palettes/Learning/Online/OnlineGHA.tox) — 入力をオンライン PCA（Sanger 則 / 一般化ヘブ則 GHA）で k 個の主成分に埋め込む。y = W(x − … ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Online/OnlineGHA/), [使用例](Palettes/Learning/Online/OnlineGHAExample.toe))
 - [OnlineRLS](Palettes/Learning/Online/OnlineRLS.tox) — 線形回帰 y ≈ θ · [f, 1] を、忘却つきの逐次最小二乗（RLS）で毎フレーム更新する。最後の係数がバイアス。… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Online/OnlineRLS/), [使用例](Palettes/Learning/Online/OnlineRLSExample.toe))
@@ -203,6 +206,7 @@ TouchDesignerの左側のタブにあるプリセットみたいなやつです.
 - [Lissajous](Palettes/Visualize/Lissajous.tox) — 2 つの値を x と y の周波数比にしたリサジュー図形を描く: x = cos(2π·a·t)、y = sin(2π·… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/Lissajous/), [使用例](Palettes/Visualize/LissajousExample.toe))
 - [PlanckianLocus](Palettes/Visualize/PlanckianLocus.tox) — 黒体放射の色（色温度）の横グラデーション。横軸は 1667 K（左端）〜 25000 K（右端）の等間隔で、6500 K… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/PlanckianLocus/), [使用例](Palettes/Visualize/PlanckianLocusExample.toe))
 <!-- tdp:palettes:end -->
+  
   
   
   
