@@ -1,0 +1,8797 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Shinh0707 の TouchDesigner Custom OP (C++) リファレンス">
+      
+      
+      
+        <link rel="canonical" href="https://shinh0707.github.io/TouchDesignerShareDatas/palettes/">
+      
+      
+        <link rel="prev" href="../plugins/PixcelSorterGlitchTOP/">
+      
+      
+        <link rel="next" href="Audio/Feature/AudioQuantizeRate/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>パレット - TouchDesigner Plugins</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/tdp.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="TouchDesigner Plugins" class="md-header__button md-logo" aria-label="TouchDesigner Plugins" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TouchDesigner Plugins
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              パレット
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="ダークモード"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="ダークモード" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="ライトモード"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ライトモード" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Shinh0707/TouchDesignerShareDatas" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TouchDesigner Plugins" class="md-nav__button md-logo" aria-label="TouchDesigner Plugins" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TouchDesigner Plugins
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Shinh0707/TouchDesignerShareDatas" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ホーム
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../downloads/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ダウンロード
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    導入
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../plugins/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    プラグイン
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            プラグイン
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CHOP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            CHOP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/BLEInCHOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BLE In (BLEInCHOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/Col2ImCHOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Col2Im (Col2ImCHOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/DotCHOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DotProduct (DotCHOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/GranularCHOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Granular (GranularCHOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/HistogramCHOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Histogram (HistogramCHOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/Im2ColCHOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Im2Col (Im2ColCHOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/LifeGameCHOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Life Game (LifeGameCHOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/MidiFileInCHOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MIDI File In (MidiFileInCHOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/SoundFontSynthCHOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SoundFont Synth (SoundFontSynthCHOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    TOP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            TOP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/BasicBlockGlitchTOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Block Glitch (BasicBlockGlitchTOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/BitCrushTOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bit Crush (BitCrushTOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/BlockNoiseTOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Block Noise (BlockNoiseTOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/FlipnoteTOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flipnote TOP (FlipnoteTOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/InstanceTOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instance TOP (InstanceTOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/PixcelSorterGlitchTOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pixel Sorter (PixcelSorterGlitchTOP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    パレット
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            パレット
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audio/Feature
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Audio/Feature
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Feature/AudioQuantizeRate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AudioQuantizeRate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Feature/CrestFactor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CrestFactor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Feature/RMSNorm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RMSNorm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Feature/VU/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VU
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Feature/ZCR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ZCR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audio/Pitch
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Audio/Pitch
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Pitch/F0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    F0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Pitch/F0Note/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    F0Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Pitch/F0ToNote/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    F0ToNote
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Pitch/NumToNoteTrigger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NumToNoteTrigger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Pitch/PSGRatio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PSGRatio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audio/Spectrum
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Audio/Spectrum
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/BaseAudioSpect/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BaseAudioSpect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/BinFrequency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BinFrequency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/FFTSize/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FFTSize
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/LogBinFrequency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LogBinFrequency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/LogRemap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LogRemap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/MagnitudeDb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MagnitudeDb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/PowerSpectrum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PowerSpectrum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/SpectralCentroid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpectralCentroid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/SpectralCentroidNorm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpectralCentroidNorm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/SpectralFlatness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpectralFlatness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/SpectralFlux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpectralFlux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Spectrum/SpectralSlope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpectralSlope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audio/Stereo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Audio/Stereo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Stereo/3DSphereMap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3DSphereMap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Stereo/MultiChannelPreTrail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MultiChannelPreTrail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Stereo/PanAngle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PanAngle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Stereo/PanAngleStereo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PanAngleStereo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Stereo/PhaseCorrelation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PhaseCorrelation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Audio/Stereo/StereoWidth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StereoWidth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AutoDiff/Activation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            AutoDiff/Activation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Activation/DLeakyReLU/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLeakyReLU
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Activation/DSigmoid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DSigmoid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Activation/DSoftmax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DSoftmax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AutoDiff/BetaDist
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            AutoDiff/BetaDist
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/BetaDist/DBetaMode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DBetaMode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/BetaDist/DBetaModeLL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DBetaModeLL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AutoDiff
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            AutoDiff
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/DAdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAdd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/DDiv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DDiv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/DDot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DDot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/DMul/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DMul
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/DPow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DPow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/DSign/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DSign
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/DSquaredDiff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DSquaredDiff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/DSub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DSub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AutoDiff/Function
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            AutoDiff/Function
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DAbs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAbs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DAdaptIm2Col/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAdaptIm2Col
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DAdaptMax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAdaptMax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DAvg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAvg
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DConstAdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DConstAdd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DConstPow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DConstPow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DCos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DCos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DDuplicate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DDuplicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DExp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DExp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DFullAvg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DFullAvg
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DIm2Col/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DIm2Col
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DInv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DInv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DL2Norm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DL2Norm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DLGamma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLGamma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DLn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DLogSoftmax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLogSoftmax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DMax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DMax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DNeg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DNeg
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DSin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DSin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DSquare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DSquare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DTan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DTan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DTanh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DTanh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/DTranspose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DTranspose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Function/RowMul/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RowMul
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AutoDiff/Image
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10">
+            <span class="md-nav__icon md-icon"></span>
+            AutoDiff/Image
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Image/DTOPRGB2ImCHOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DTOPRGB2ImCHOP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Image/ImCHOP2TOPRGB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImCHOP2TOPRGB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/Image/TOPRGB2ImCHOP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TOPRGB2ImCHOP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_11" id="__nav_5_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AutoDiff/NN
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_11">
+            <span class="md-nav__icon md-icon"></span>
+            AutoDiff/NN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/NN/InitPattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    InitPattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/NN/NNAdamW/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NNAdamW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/NN/NNAdaptConv2d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NNAdaptConv2d
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/NN/NNConv2d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NNConv2d
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/NN/NNL2Loss/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NNL2Loss
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/NN/NNLinear/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NNLinear
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/NN/SimpleConvNN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleConvNN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AutoDiff/NN/SimpleNN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleNN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_12" id="__nav_5_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Geometry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_12">
+            <span class="md-nav__icon md-icon"></span>
+            Geometry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/4DTorus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4DTorus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/CubeRender/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CubeRender
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/InverseStereographicProjection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    InverseStereographicProjection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/Loxodrome/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loxodrome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/LoxodromeDirection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LoxodromeDirection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/SquarePyramid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SquarePyramid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/StereographicProjection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StereographicProjection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_13" id="__nav_5_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Geometry/TriangleTile
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_13">
+            <span class="md-nav__icon md-icon"></span>
+            Geometry/TriangleTile
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/TriangleTile/BigsiteTriangles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BigsiteTriangles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/TriangleTile/InverseTriangleTriangleTileIdx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    InverseTriangleTriangleTileIdx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/TriangleTile/TriangleRowIdx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TriangleRowIdx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/TriangleTile/TriangleTriangleTileIdx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TriangleTriangleTileIdx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Geometry/TriangleTile/TriangleTriangleTilesNeighbors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TriangleTriangleTilesNeighbors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_14" id="__nav_5_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Image/Effect
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_14">
+            <span class="md-nav__icon md-icon"></span>
+            Image/Effect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Effect/BlackFrame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BlackFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Effect/CrossFade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CrossFade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Effect/CurlNoise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CurlNoise
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Effect/CurlNoiseFlow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CurlNoiseFlow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Effect/ImagePopup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImagePopup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Effect/Pixelate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pixelate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Effect/RetroWindow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RetroWindow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Effect/ScanLine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ScanLine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Effect/ShiftRGB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ShiftRGB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Effect/SoftFade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SoftFade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_15" id="__nav_5_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Image/Feature
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_15">
+            <span class="md-nav__icon md-icon"></span>
+            Image/Feature
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Feature/HsvVector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HsvVector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Feature/ImgFeat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImgFeat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_16" id="__nav_5_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Image/Filter
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_16">
+            <span class="md-nav__icon md-icon"></span>
+            Image/Filter
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Filter/Dilation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dilation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Filter/Erosion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Erosion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Filter/Sobel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sobel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_17" id="__nav_5_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Image/Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_17">
+            <span class="md-nav__icon md-icon"></span>
+            Image/Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Math/Alpha2RGBA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alpha2RGBA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Math/DotRGB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DotRGB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Math/LimitMagnitudeRGB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LimitMagnitudeRGB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Math/MagnitudeRGB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MagnitudeRGB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Math/MaskAlpha/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaskAlpha
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Math/MaskedAverage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaskedAverage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Math/NormalizeRGB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NormalizeRGB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Math/PositionsPairDist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PositionsPairDist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Math/SafeDivide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SafeDivide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Math/SafeDivideAlpha/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SafeDivideAlpha
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Image/Math/SafeInverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SafeInverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_18" id="__nav_5_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning/Audio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_18">
+            <span class="md-nav__icon md-icon"></span>
+            Learning/Audio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Audio/SpectAE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpectAE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Audio/SpectUNet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpectUNet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_19" id="__nav_5_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning/AutoVJ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_19">
+            <span class="md-nav__icon md-icon"></span>
+            Learning/AutoVJ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/AutoVJ/AutoVJ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AutoVJ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/AutoVJ/AutoVJS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AutoVJS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_20" id="__nav_5_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning/Embedding
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_20">
+            <span class="md-nav__icon md-icon"></span>
+            Learning/Embedding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Embedding/SimpleEmbedding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleEmbedding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Embedding/SimpleImageEmbedding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleImageEmbedding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Embedding/UMAPEmbedding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UMAPEmbedding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_21" id="__nav_5_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning/Online
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_21">
+            <span class="md-nav__icon md-icon"></span>
+            Learning/Online
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Online/InfoDiff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    InfoDiff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Online/OnlineGHA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OnlineGHA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Online/OnlineRLS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OnlineRLS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Online/OnlineStandardize/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OnlineStandardize
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_22" id="__nav_5_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning/Visualize
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_22">
+            <span class="md-nav__icon md-icon"></span>
+            Learning/Visualize
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Visualize/ConvEdges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConvEdges
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Visualize/ConvVolume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConvVolume
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Visualize/LayerEdges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LayerEdges
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Visualize/LayerNodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LayerNodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Visualize/NNLinearView/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NNLinearView
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Learning/Visualize/NetGraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NetGraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_23" id="__nav_5_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_23">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/AbsClamp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AbsClamp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/AllAnalyze/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AllAnalyze
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/ColRowToIdx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ColRowToIdx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/Digamma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digamma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/Flip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flip
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/GaussianAffinity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GaussianAffinity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/GlobalStdNorm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GlobalStdNorm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/HoldFeedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HoldFeedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/LGamma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LGamma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/LogSoftmax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LogSoftmax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/MinClamp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MinClamp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/Mod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mod
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/PeriodicTanh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PeriodicTanh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/Random/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Random
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/Sigmoid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sigmoid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/Softmax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Softmax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/Std/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Std
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/Threshold/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Threshold
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/TimeLayerNorm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TimeLayerNorm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/TorusMod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TorusMod
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_24" id="__nav_5_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math/Matrix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_24">
+            <span class="md-nav__icon md-icon"></span>
+            Math/Matrix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/Matrix/RotMatrix2D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RotMatrix2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/Matrix/SobelKernel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SobelKernel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math/Matrix/SpectralRadius/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpectralRadius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_25" id="__nav_5_25_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sequence
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_25">
+            <span class="md-nav__icon md-icon"></span>
+            Sequence
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Sequence/BeatBase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BeatBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Sequence/ValueToTrigger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ValueToTrigger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_26" id="__nav_5_26_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Simulation/Boid
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_26">
+            <span class="md-nav__icon md-icon"></span>
+            Simulation/Boid
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/Boid/Boid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/Boid/BoidOut/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BoidOut
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/Boid/BoidSimulationStep/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BoidSimulationStep
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/Boid/SteerRGB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SteerRGB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_27" id="__nav_5_27_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Simulation/Galaxy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_27">
+            <span class="md-nav__icon md-icon"></span>
+            Simulation/Galaxy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/Galaxy/GalaxyBase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GalaxyBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/Galaxy/SoftenCenterGravityAcc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SoftenCenterGravityAcc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/Galaxy/SoftenCenterGravityVel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SoftenCenterGravityVel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/Galaxy/ThinDisk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ThinDisk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_28" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_28" id="__nav_5_28_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Simulation/LifeGame
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_28_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_28">
+            <span class="md-nav__icon md-icon"></span>
+            Simulation/LifeGame
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/LifeGame/NeighborLifeGame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NeighborLifeGame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/LifeGame/RawNeighborLifeGame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RawNeighborLifeGame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/LifeGame/SimpleLifeGame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleLifeGame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/LifeGame/SquareLifeGame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SquareLifeGame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/LifeGame/SquareLifeGameNeighborIdx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SquareLifeGameNeighborIdx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_29" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_29" id="__nav_5_29_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Simulation/Population
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_29_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_29">
+            <span class="md-nav__icon md-icon"></span>
+            Simulation/Population
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/Population/BirthDistribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BirthDistribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/Population/MarriageDistribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MarriageDistribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_30" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_30" id="__nav_5_30_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Simulation/ReactionDiffusion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_30_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_30">
+            <span class="md-nav__icon md-icon"></span>
+            Simulation/ReactionDiffusion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/ReactionDiffusion/GrayScott/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GrayScott
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_31" id="__nav_5_31_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Simulation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_31">
+            <span class="md-nav__icon md-icon"></span>
+            Simulation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Simulation/SpeedUpdate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpeedUpdate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_32" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_32" id="__nav_5_32_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UV
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_32_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_32">
+            <span class="md-nav__icon md-icon"></span>
+            UV
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UV/PrintGalleryUV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PrintGalleryUV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UV/RTheta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RTheta
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UV/identifyUV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    identifyUV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UV/lineDrawer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    lineDrawer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UV/mandalaUV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mandalaUV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UV/pinholeRadtan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pinholeRadtan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_33" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_33" id="__nav_5_33_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utility
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_33_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_33">
+            <span class="md-nav__icon md-icon"></span>
+            Utility
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Utility/FrameDelay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FrameDelay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_34" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_34" id="__nav_5_34_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visualize
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_34_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_34">
+            <span class="md-nav__icon md-icon"></span>
+            Visualize
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Visualize/ChannelLissajous/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ChannelLissajous
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Visualize/Goniometer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Goniometer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Visualize/HzLissajous3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HzLissajous3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Visualize/HzLissajousAnimated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HzLissajousAnimated
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Visualize/Lissajous/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lissajous
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Visualize/PlanckianLocus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PlanckianLocus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    処理時間
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    開発ガイド
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      使い方
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      一覧
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一覧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#audiofeature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio/Feature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audiopitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio/Pitch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audiospectrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio/Spectrum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audiostereo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio/Stereo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autodiffactivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      AutoDiff/Activation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autodiffbetadist" class="md-nav__link">
+    <span class="md-ellipsis">
+      AutoDiff/BetaDist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autodiff" class="md-nav__link">
+    <span class="md-ellipsis">
+      AutoDiff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autodifffunction" class="md-nav__link">
+    <span class="md-ellipsis">
+      AutoDiff/Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autodiffimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      AutoDiff/Image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autodiffnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      AutoDiff/NN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometrytriangletile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometry/TriangleTile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imageeffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image/Effect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagefeature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image/Feature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagefilter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image/Filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagemath" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image/Math
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learningaudio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning/Audio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learningautovj" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning/AutoVJ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learningembedding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning/Embedding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learningonline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning/Online
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learningvisualize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning/Visualize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Math
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mathmatrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Math/Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulationboid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation/Boid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulationgalaxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation/Galaxy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulationlifegame" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation/LifeGame
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulationpopulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation/Population
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulationreactiondiffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation/ReactionDiffusion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      UV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualize
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="_1">パレット<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<!-- tools/palettes.py が自動生成します。 -->
+
+<p>TouchDesigner で作った、ネットワークにそのまま入れて使えるコンポーネント(<code>.tox</code>)です。</p>
+<h2 id="_2">使い方<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>一覧から <code>.tox</code> をダウンロードします。</li>
+<li>TouchDesigner のネットワークにドラッグ &amp; ドロップすると、そのまま使えます。</li>
+<li>よく使うものは、左の <strong>Palette</strong> の <strong>My Components</strong> に入れておくと、いつでも取り出せます(フォルダに <code>.tox</code> を置くか、Palette ブラウザにドラッグします)。</li>
+<li>Custom オペレータを使うパレットは、先にそのプラグインを入れてください(各ページの「依存プラグイン」)。</li>
+</ol>
+<p><em>詳しくは <a href="https://docs.derivative.ca/Palette">Palette</a> を参照してください。</em></p>
+<h2 id="_3">一覧<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="audiofeature">Audio/Feature<a class="headerlink" href="#audiofeature" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Audio/Feature/AudioQuantizeRate/">AudioQuantizeRate</a></td>
+<td>オーディオが Q ビットの段（±1 を 2^Q − 1 段に分けた格子）にどれだけ乗っているか（ビットクラッシュ・ローファイらしさ）を 0〜1 で出す。各サンプ</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Feature/AudioQuantizeRate.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Feature/CrestFactor/">CrestFactor</a></td>
+<td>クレストファクター（ピーク ÷ RMS）。音のとがり具合（打撃音ほど大きく、正弦波で √2 ≈ 1.41、矩形波で 1）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Feature/CrestFactor.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Feature/RMSNorm/">RMSNorm</a></td>
+<td>RMS で割って大きさをそろえる（x / RMS(x)）。音量によらない波形の形を比べたいときに使う。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Feature/RMSNorm.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Feature/VU/">VU</a></td>
+<td>VU メーター。整流した信号を 2 次のフィルタ（減衰比 Dump、固有角周波数 Angf：VU 規格の約 300 ms の動き）に通し、基準レベル Vu0 d</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Feature/VU.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Feature/ZCR/">ZCR</a></td>
+<td>ゼロ交差率（隣り合うサンプルで符号が変わる割合）。ノイズや高い音ほど大きく、低い音ほど小さい。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Feature/ZCR.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="audiopitch">Audio/Pitch<a class="headerlink" href="#audiopitch" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Audio/Pitch/F0/">F0</a></td>
+<td>基本周波数（音の高さ）を Hz で推定する。参照したスペクトルの上で、Fmin〜Fmax の候補ごとに、その 1〜12 倍の位置の振幅（平方根で圧縮）を、高い倍</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Pitch/F0.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Pitch/F0Note/">F0Note</a></td>
+<td>F0 で推定した音の高さを、整数の MIDI ノート番号で出す（F0 → F0ToNote → 四捨五入）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Pitch/F0Note.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Pitch/F0ToNote/">F0ToNote</a></td>
+<td>周波数 Hz を MIDI ノート番号（小数）に変換する: 69 + 12·log2(f / 440)。A4 = 440 Hz = 69。8.18 Hz（ノート</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Pitch/F0ToNote.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Pitch/NumToNoteTrigger/">NumToNoteTrigger</a></td>
+<td>ノート番号を 128 サンプルのワンホットに変換する。入力のノート番号と ±0.01 以内のインデックスだけが 1、ほかは 0（ノート 0〜127 のどれが鳴っ</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Pitch/NumToNoteTrigger.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Pitch/PSGRatio/">PSGRatio</a></td>
+<td>倍音のうち奇数次の占める割合（矩形波・PSG らしさ）。F0 を推定し、スペクトルの各ビンが何次の倍音に近いかを求めて、奇数次と偶数次のエネルギー |X|² を</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Pitch/PSGRatio.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="audiospectrum">Audio/Spectrum<a class="headerlink" href="#audiospectrum" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Audio/Spectrum/BaseAudioSpect/">BaseAudioSpect</a></td>
+<td>オーディオ CHOP を Audio Spectrum CHOP でスペクトルに変換する土台。ほかの AudioSpectrum 部品は、この中の Audio</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/BaseAudioSpect.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Spectrum/BinFrequency/">BinFrequency</a></td>
+<td>スペクトルの各ビンの中心周波数 f_k = k · fs / N（Hz）を、スペクトルと同じ長さのチャンネルで出す。fs は Audio Spectrum CH</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/BinFrequency.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Spectrum/FFTSize/">FFTSize</a></td>
+<td>参照した Audio Spectrum CHOP の FFT サイズ N（= 2^(fftsize+6)）を定数で出す。fk などの周波数計算に使う下請け部品。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/FFTSize.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Spectrum/LogBinFrequency/">LogBinFrequency</a></td>
+<td>ビン周波数を対数（オクターブ）軸に変換した x_k = log2(f_k) を出す。log2 の前に f_k を Fclamp Hz で、後に Xmin で下限</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/LogBinFrequency.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Spectrum/LogRemap/">LogRemap</a></td>
+<td>サンプルの横軸を対数にとり直す（等間隔の周波数ビン → 対数の周波数軸）。出力の横位置 t (0〜1) が元の列の位置 Minratio^(1 − t) に対応</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/LogRemap.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Spectrum/MagnitudeDb/">MagnitudeDb</a></td>
+<td>スペクトル振幅をデシベル y_k = 20·log10(|X_k|) に変換する。振幅は 0.001 で下限クランプ（-60 dB が床）。SpectralSl</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/MagnitudeDb.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Spectrum/PowerSpectrum/">PowerSpectrum</a></td>
+<td>各サンプルの 2 乗 |x|²（振幅スペクトル → パワースペクトル）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/PowerSpectrum.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Spectrum/SpectralCentroid/">SpectralCentroid</a></td>
+<td>スペクトル重心（明るさの指標）を Hz で出す。重心 = Σ E_k f_k / Σ E_k、E_k = |X_k|²。高域成分が多いほど大きい。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/SpectralCentroid.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Spectrum/SpectralCentroidNorm/">SpectralCentroidNorm</a></td>
+<td>スペクトル重心をナイキスト周波数で割って 0〜1 に正規化したもの: (Σ E_k f_k / Σ E_k) / (fs/2)、E_k = |X_k|²。0 =</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/SpectralCentroidNorm.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Spectrum/SpectralFlatness/">SpectralFlatness</a></td>
+<td>スペクトル平坦度（ノイズらしさ）。エネルギー E_k = |X_k|² の幾何平均 ÷ 算術平均で、0（純音・音程感が強い）〜1（ホワイトノイズ）。E_k は</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/SpectralFlatness.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Spectrum/SpectralFlux/">SpectralFlux</a></td>
+<td>スペクトルフラックス（立ち上がり・オンセットの強さ）。前フレームからの増加分だけを二乗して合計: Σ max(0, X_k(t) − X_k(t−1))²。音が</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/SpectralFlux.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Spectrum/SpectralSlope/">SpectralSlope</a></td>
+<td>スペクトル傾斜。横軸 log2(f)（xk）、縦軸 dB（yk）の最小二乗直線の傾きを dB/オクターブで出す。負に大きいほど高域が弱い（暗い音）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Spectrum/SpectralSlope.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="audiostereo">Audio/Stereo<a class="headerlink" href="#audiostereo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Audio/Stereo/3DSphereMap/">3DSphereMap</a></td>
+<td>ステレオ信号を 3D の点列にする（ゴニオメーターの 3D 版）。各サンプルを、z = 区間内の位置（−1〜1）、y = √(1−z²)·L、x = √(1−y</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Stereo/3DSphereMap.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Stereo/MultiChannelPreTrail/">MultiChannelPreTrail</a></td>
+<td>タイムスライスの全サンプルを、1 サンプルずつ別のチャンネルに並べ替える（Shuffle: チャンネルとサンプルを入れ替え → 全部を分割）。N チャンネル ×</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Stereo/MultiChannelPreTrail.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Stereo/PanAngle/">PanAngle</a></td>
+<td>ステレオ信号の定位（左右どちらに寄っているか）を −1〜1 で出す。左右の RMS の角度 atan2(L, R)（0° = 右だけ、45° = 中央、90°</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Stereo/PanAngle.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Stereo/PanAngleStereo/">PanAngleStereo</a></td>
+<td>PanAngle の、L と R を別々の CHOP で受ける版。2 つのモノラル信号のどちらが大きいかを −1〜1 で出す（−1 = in1 だけ、+1 =</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Stereo/PanAngleStereo.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Stereo/PhaseCorrelation/">PhaseCorrelation</a></td>
+<td>位相相関計（コリレーションメーター）。左右がどれだけ同じ形かを −1〜1 で出す: Σ L·R / √(Σ L² · Σ R²)（1 フレーム分の区間）。+1</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Stereo/PhaseCorrelation.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Audio/Stereo/StereoWidth/">StereoWidth</a></td>
+<td>ステレオの広がり。Side（L−R）と Mid（L+R）のエネルギーから ΣS² / (ΣS² + ΣM²) を出す。0 = モノラル（左右が同じ）、0.5 =</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Audio/Stereo/StereoWidth.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="autodiffactivation">AutoDiff/Activation<a class="headerlink" href="#autodiffactivation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AutoDiff/Activation/DLeakyReLU/">DLeakyReLU</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。Leaky ReLU y = x（x &gt; 0）/ Slope · x（x ≤ 0）。D1 に「out1 に</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Activation/DLeakyReLU.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Activation/DSigmoid/">DSigmoid</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。シグモイド y = 1 / (1 + e^(−Gain·x))。D1 に「out1 についての損失の勾配</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Activation/DSigmoid.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Activation/DSoftmax/">DSoftmax</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。ソフトマックス y = softmax(x / Tempature)（各チャンネルのサンプルについて。和が</td>
+<td>DotCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Activation/DSoftmax.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="autodiffbetadist">AutoDiff/BetaDist<a class="headerlink" href="#autodiffbetadist" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AutoDiff/BetaDist/DBetaMode/">DBetaMode</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。ベータ分布 Beta(a, b) の最頻値 y = (a − 1)/(a + b − 2)。D1 に「ou</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/BetaDist/DBetaMode.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/BetaDist/DBetaModeLL/">DBetaModeLL</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。ベータ分布 Beta(a, b) の最頻値での確率密度の対数（ピークの高さ = 分布の鋭さ）。ln B(a</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/BetaDist/DBetaModeLL.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="autodiff">AutoDiff<a class="headerlink" href="#autodiff" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AutoDiff/DAdd/">DAdd</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。足し算 y = a + b。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/DAdd.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/DDiv/">DDiv</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。割り算 y = a / b。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/DDiv.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/DDot/">DDot</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。行列の積 Y = A · B（チャンネルが行、サンプルが列）。D1 に「out1 についての損失の勾配 d</td>
+<td>DotCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/DDot.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/DMul/">DMul</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。掛け算（要素ごと）y = a · b。D1 に「out1 についての損失の勾配 dL/dy」（out1 と</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/DMul.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/DPow/">DPow</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。べき乗 y = aᵇ。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の CHO</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/DPow.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/DSign/">DSign</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。符号 y = sign(x)（−1 / 0 / 1）。D1 に「out1 についての損失の勾配 dL/dy</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/DSign.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/DSquaredDiff/">DSquaredDiff</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。要素ごとの差の 2 乗 y = (a − b)²。D1 に「out1 についての損失の勾配 dL/dy」（</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/DSquaredDiff.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/DSub/">DSub</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。引き算 y = a − b。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/DSub.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="autodifffunction">AutoDiff/Function<a class="headerlink" href="#autodifffunction" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AutoDiff/Function/DAbs/">DAbs</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。絶対値 y = |x|。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の CH</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DAbs.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DAdaptIm2Col/">DAdaptIm2Col</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。出力の大きさ（Outw × Outh）から、カーネルとストライドを自動で決めて im2col する（アダプ</td>
+<td>Col2ImCHOP, Im2ColCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DAdaptIm2Col.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DAdaptMax/">DAdaptMax</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。アダプティブ max プーリング（PyTorch の AdaptiveMaxPool2d と同じく色ごと）</td>
+<td>Col2ImCHOP, Im2ColCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DAdaptMax.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DAvg/">DAvg</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。各チャンネルのサンプルの平均 y = mean(x)。D1 に「out1 についての損失の勾配 dL/dy</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DAvg.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DConstAdd/">DConstAdd</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。定数を足す y = x + Value。D1 に「out1 についての損失の勾配 dL/dy」（out1</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DConstAdd.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DConstPow/">DConstPow</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。定数乗 y = x^Exponent。D1 に「out1 についての損失の勾配 dL/dy」（out1 と</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DConstPow.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DCos/">DCos</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。余弦 y = cos x。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の C</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DCos.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DDuplicate/">DDuplicate</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。1 つの値を 2 か所で使うための分岐。out1・out2 に in1 をそのまま出し、逆伝播では 2 つ</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DDuplicate.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DExp/">DExp</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。指数関数 y = eˣ。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の CH</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DExp.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DFullAvg/">DFullAvg</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。全チャンネル・全サンプルの平均 y = mean(x)。D1 に「out1 についての損失の勾配 dL/d</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DFullAvg.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DIm2Col/">DIm2Col</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。画像の CHOP（画素 × 色の行列）を、畳み込み用のパッチの列（im2col）に並べ替える。D1 に「o</td>
+<td>Col2ImCHOP, Im2ColCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DIm2Col.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DInv/">DInv</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。逆数 y = 1/x。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の CHO</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DInv.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DL2Norm/">DL2Norm</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。各チャンネルを長さ 1 にそろえる（L2 正規化）y = x / (‖x‖ + 0.0001)。‖x‖ は</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DL2Norm.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DLGamma/">DLGamma</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。ガンマ関数の対数 y = ln Γ(x)（スターリングの近似: (x − ½) ln x − x + ½</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DLGamma.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DLn/">DLn</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。自然対数 y = ln x。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DLn.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DLogSoftmax/">DLogSoftmax</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。対数ソフトマックス y = (x − max)/Tempature − ln Σ exp((x − max</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DLogSoftmax.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DMax/">DMax</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。各チャンネルのサンプルの最大値 y = max(x)。D1 に「out1 についての損失の勾配 dL/dy</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DMax.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DNeg/">DNeg</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。符号反転 y = −x。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の CH</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DNeg.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DSin/">DSin</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。正弦 y = sin x。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の C</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DSin.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DSquare/">DSquare</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。2 乗 y = x²。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の CHO</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DSquare.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DTan/">DTan</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。正接 y = tan x。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の C</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DTan.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DTanh/">DTanh</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。双曲線正接 y = tanh x。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DTanh.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/DTranspose/">DTranspose</a></td>
+<td>AutoDiff（CHOP で組んだ自動微分）の部品。転置（チャンネルとサンプルを入れ替える）。D1 に「out1 についての損失の勾配 dL/dy」（out1</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/DTranspose.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Function/RowMul/">RowMul</a></td>
+<td>2 つの CHOP をチャンネルごとに掛けて、サンプルについて足す（行ごとの内積）。y_c = Σ_s a_cs · b_cs。DL2Norm などの中で使う。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Function/RowMul.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="autodiffimage">AutoDiff/Image<a class="headerlink" href="#autodiffimage" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AutoDiff/Image/DTOPRGB2ImCHOP/">DTOPRGB2ImCHOP</a></td>
+<td>画像 TOP を画像の CHOP にする（TOPRGB2ImCHOP）。逆伝播では、D1 に入れた勾配（画像の CHOP）を画像 TOP に戻して outD1</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Image/DTOPRGB2ImCHOP.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Image/ImCHOP2TOPRGB/">ImCHOP2TOPRGB</a></td>
+<td>画像の CHOP（H·W チャンネル × 3 サンプル）を、幅 Win の画像 TOP に戻す（TOPRGB2ImCHOP の逆）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Image/ImCHOP2TOPRGB.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/Image/TOPRGB2ImCHOP/">TOPRGB2ImCHOP</a></td>
+<td>画像 TOP を、AutoDiff で使う画像の CHOP（画素 × 色の行列）にする。H·W チャンネル（画素、左下から行ごと）× 3 サンプル（R, G,</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/Image/TOPRGB2ImCHOP.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="autodiffnn">AutoDiff/NN<a class="headerlink" href="#autodiffnn" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AutoDiff/NN/InitPattern/">InitPattern</a></td>
+<td>ニューラルネットの重みの初期値（乱数の行列 Chans × Samples）。Mode で初期化の方法を選ぶ: He（ReLU 向け、正規分布、分散 2/入力数</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/NN/InitPattern.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/NN/NNAdamW/">NNAdamW</a></td>
+<td>AdamW の 1 ステップ: 学習するパラメータ（target）を、その勾配（deriv）で更新した値を出す。外の Feedback CHOP で out1</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/NN/NNAdamW.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/NN/NNAdaptConv2d/">NNAdaptConv2d</a></td>
+<td>出力の大きさ（Outw × Outh）を決めて畳み込む層。入力の大きさからカーネルとストライドを自動で決め（DAdaptIm2Col）、NNLinear で O</td>
+<td>Col2ImCHOP, DotCHOP, Im2ColCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/NN/NNAdaptConv2d.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/NN/NNConv2d/">NNConv2d</a></td>
+<td>学習する 2 次元畳み込み層。画像の CHOP を im2col でパッチの列にし、NNLinear で Outchan チャンネルの特徴にする。逆伝播では c</td>
+<td>Col2ImCHOP, DotCHOP, Im2ColCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/NN/NNConv2d.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/NN/NNL2Loss/">NNL2Loss</a></td>
+<td>平均二乗誤差（L2 損失）L = mean((estimated − target)²) と、estimated についての勾配 dL/d(estimated)</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/NN/NNL2Loss.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/NN/NNLinear/">NNLinear</a></td>
+<td>学習する全結合層 y = x · W + b。重み W（入力のサンプル数 × Outsize）は He の初期化、バイアス b は 0 から始め、D1 に入れた</td>
+<td>DotCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/NN/NNLinear.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/NN/SimpleConvNN/">SimpleConvNN</a></td>
+<td>画像から target（CHOP）を当てるように、その場で学習する小さな畳み込みネット（3×3 畳み込み → 色の max → 2×2 畳み込み → L2 正規</td>
+<td>Col2ImCHOP, DotCHOP, Im2ColCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/NN/SimpleConvNN.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="AutoDiff/NN/SimpleNN/">SimpleNN</a></td>
+<td>その場で学習する小さな 2 層のニューラルネット（全結合 → L2 正規化 → Leaky ReLU → 全結合）。in1 から target を当てるように、</td>
+<td>DotCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/NN/SimpleNN.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="geometry">Geometry<a class="headerlink" href="#geometry" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Geometry/4DTorus/">4DTorus</a></td>
+<td>4 次元のトーラス（クリフォードトーラス風）を 3 次元に射影した点群。4D の 2 つの面（xw と zw）で回転させてから、透視投影（Projection</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/4DTorus.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Geometry/CubeRender/">CubeRender</a></td>
+<td>立方体（Box SOP、1 辺 1）を、ライト付きのカメラで描いた画像を出す。回転・大きさ・カメラの位置と視野角をパラメータで変えられる。3D の向きや投影の確</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/CubeRender.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Geometry/InverseStereographicProjection/">InverseStereographicProjection</a></td>
+<td>3 次元の点を 3 次元球面 S³（4 次元の単位球面）の上に持ち上げる（逆立体射影）: (2x, |x|² − 1) / (|x|² + 1)。4D で回転さ</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/InverseStereographicProjection.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Geometry/Loxodrome/">Loxodrome</a></td>
+<td>ロクソドローム（球面上の等角航路のらせん）をもとにした曲線の座標を出す。半径 R、経度の角度 T、傾き A から、x = R·cos T / cosh(A·T)</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/Loxodrome.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Geometry/LoxodromeDirection/">LoxodromeDirection</a></td>
+<td>球面上の各点で、経線と一定の角度 α をなす方向（ロクソドローム・等角航路の向き）の単位ベクトルを出す。Center を中心、Axis を極とする球面で考える。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/LoxodromeDirection.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Geometry/SquarePyramid/">SquarePyramid</a></td>
+<td>正四角錐の SOP（底面の 1 辺 A、高さ H、底面の中心が原点、頂点が下向き）。インスタンスの元の形に使う。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/SquarePyramid.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Geometry/StereographicProjection/">StereographicProjection</a></td>
+<td>4 次元の点（3 次元球面 S³ の上）を、北極 w = 1 から 3 次元へ立体射影する: P = xyz / (1 − w)。InverseStereogr</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/StereographicProjection.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="geometrytriangletile">Geometry/TriangleTile<a class="headerlink" href="#geometrytriangletile" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Geometry/TriangleTile/BigsiteTriangles/">BigsiteTriangles</a></td>
+<td>東京ビッグサイトの三角ドームのような、三角形を三角形に敷き詰めた面の、各小三角形の位置・回転・向き（上向き / 下向き）を出す。インスタンスでパネルを並べるのに</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/TriangleTile/BigsiteTriangles.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Geometry/TriangleTile/InverseTriangleTriangleTileIdx/">InverseTriangleTriangleTileIdx</a></td>
+<td>三角形の中の三角形タイルの (j, i) から通し番号を出す: idx = (N + 1 − j)·j + i。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/TriangleTile/InverseTriangleTriangleTileIdx.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Geometry/TriangleTile/TriangleRowIdx/">TriangleRowIdx</a></td>
+<td>大きな三角形を小さな三角形で敷き詰めたときの、通し番号 i から行の番号 j を出す。行 j には N − 2j 個の三角形があり（0 行目に N 個、1 行目</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/TriangleTile/TriangleRowIdx.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Geometry/TriangleTile/TriangleTriangleTileIdx/">TriangleTriangleTileIdx</a></td>
+<td>三角形の中の三角形タイルの通し番号を、(j, i)（j = 段、i = 段の中の位置）に変える。InverseTriangleTriangleTileIdx の</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/TriangleTile/TriangleTriangleTileIdx.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Geometry/TriangleTile/TriangleTriangleTilesNeighbors/">TriangleTriangleTilesNeighbors</a></td>
+<td>三角形の中の三角形タイルで、各タイル (j, i) の隣（左右と、上か下の 3 つ）の通し番号を出す。上向き（i が偶数）の三角形は 1 つ下の段の i + 1</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Geometry/TriangleTile/TriangleTriangleTilesNeighbors.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="imageeffect">Image/Effect<a class="headerlink" href="#imageeffect" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Image/Effect/BlackFrame/">BlackFrame</a></td>
+<td>画像の縁を黒くぼかして落とす（額縁・周辺減光）。中央の四角（大きさ 1 − Borderwidth）だけを残し、その外側を Softness のぼかしで黒にする</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Effect/BlackFrame.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Effect/CrossFade/">CrossFade</a></td>
+<td>映像の残像・なめらかさ（時間方向のクロスフェード）。前のフレームの結果と今の入力を Crsr の割合で混ぜ続ける（フィードバック）。Crsr が大きいほど動きが</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Effect/CrossFade.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Effect/CurlNoise/">CurlNoise</a></td>
+<td>カールノイズの流れで画像を流す（液体・煙のように渦を巻いて流れる歪み）。ポテンシャル（ノイズ画像）の勾配を 90° 回した速度場で、各ピクセルの位置を毎フレーム</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Effect/CurlNoise.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Effect/CurlNoiseFlow/">CurlNoiseFlow</a></td>
+<td>カールノイズの流れで画像を流す（Image/Effect/CurlNoise の発展版）。ポテンシャルを 0〜1 に正規化し、その勾配を 90° 回した速度場で</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Effect/CurlNoiseFlow.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Effect/ImagePopup/">ImagePopup</a></td>
+<td>画像を何枚も、ランダムな位置にポップアップさせる。in2 の y0 チャンネルの各サンプルが画像 1 枚にあたり、その値が画像の大きさになる（0 で見えない）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Effect/ImagePopup.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Effect/Pixelate/">Pixelate</a></td>
+<td>モザイク（ピクセル化）。画像を (1 − Rate) 倍の解像度に最近傍で縮めてから、元の解像度に最近傍で戻すので、四角いブロックになる。Mix で元の画像と混</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Effect/Pixelate.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Effect/RetroWindow/">RetroWindow</a></td>
+<td>画像を昔のパソコン風のウィンドウの枠に入れる。角の丸い青いタイトルバーの枠と、右上の赤い閉じるボタン（×）を重ねる。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Effect/RetroWindow.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Effect/ScanLine/">ScanLine</a></td>
+<td>ブラウン管風の走査線。黒から白への縦のグラデーションを細かく繰り返した縞を、画像に掛け合わせる。Time で縞の明暗を入れ替える（毎フレーム 0 と 1 を切り</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Effect/ScanLine.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Effect/ShiftRGB/">ShiftRGB</a></td>
+<td>RGB を別々にずらして重ねる（色収差・RGB ずれのグリッチ）。R・G・B をそれぞれ Shift の x, y だけ平行移動し、z を強さとして掛けてから加</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Effect/ShiftRGB.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Effect/SoftFade/">SoftFade</a></td>
+<td>残像のエフェクト。画面の変化したところだけ（重ねた結果との差が大きい所）を、残像のようにやわらかく重ねていく。Freeze で今の状態を止める。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Effect/SoftFade.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="imagefeature">Image/Feature<a class="headerlink" href="#imagefeature" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Image/Feature/HsvVector/">HsvVector</a></td>
+<td>画像を HSV にして、各画素を円錐の座標 (s·v·cos h, s·v·sin h, v) にした点の列を CHOP（x, y, z）で出す。色の分布を 3</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Feature/HsvVector.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Feature/ImgFeat/">ImgFeat</a></td>
+<td>画像の小さな特徴ベクトル（75 個の値）。5×3 に縮めた画像の色を、色相の円の上の点 (s·v·sin h, s·v·cos h) にしたもの（15 画素 ×</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Feature/ImgFeat.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="imagefilter">Image/Filter<a class="headerlink" href="#imagefilter" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Image/Filter/Dilation/">Dilation</a></td>
+<td>2 値画像の膨張（モルフォロジー）。白い部分を 1 px 太らせる（3×3 の近くに白があれば白）。マスクの穴埋めや、細い線を太くするのに使う。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Filter/Dilation.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Filter/Erosion/">Erosion</a></td>
+<td>2 値画像の収縮（モルフォロジー）。白い部分を 1 px 細らせる（3×3 がすべて白のときだけ白）。マスクの小さなゴミを消したり、縁を内側に寄せるのに使う。8</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Filter/Erosion.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Filter/Sobel/">Sobel</a></td>
+<td>Sobel フィルタで縁（明るさの勾配）を出す。Sobelx で横方向の勾配 Gx、Sobely で縦方向の勾配 Gy、両方オンで縁の強さ |Gx| + |Gy</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Filter/Sobel.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="imagemath">Image/Math<a class="headerlink" href="#imagemath" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Image/Math/Alpha2RGBA/">Alpha2RGBA</a></td>
+<td>アルファを RGBA の全チャンネルに写す（1 チャンネルの値を、ほかの画像に掛けられる形にする）。32 bit float。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Math/Alpha2RGBA.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Math/DotRGB/">DotRGB</a></td>
+<td>2 つの画像の画素ごとの内積 r₁r₂ + g₁g₂ + b₁b₂ を出す（アルファは使わない）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Math/DotRGB.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Math/LimitMagnitudeRGB/">LimitMagnitudeRGB</a></td>
+<td>RGB ベクトルの長さを Magnitude 以下に抑える（長いものだけ向きを保って Magnitude に縮め、短いものはそのまま）。力や速度の上限に使う。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Math/LimitMagnitudeRGB.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Math/MagnitudeRGB/">MagnitudeRGB</a></td>
+<td>各画素の RGB をベクトルとみた長さ √(r² + g² + b²) を出す（アルファは使わない）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Math/MagnitudeRGB.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Math/MaskAlpha/">MaskAlpha</a></td>
+<td>target に maskAlpha のアルファを掛ける（アルファ = 0〜1 の重みやマスク）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Math/MaskAlpha.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Math/MaskedAverage/">MaskedAverage</a></td>
+<td>マスク付きの平均: Σ(target × マスク) ÷ Σ(マスク)。Scope で、画像全体・行ごと・列ごとのどれで平均するかを選ぶ（N×N のペアの画像なら</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Math/MaskedAverage.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Math/NormalizeRGB/">NormalizeRGB</a></td>
+<td>各画素の RGB ベクトルを長さ 1 にする（長さは 0.0001 で下限を付けて割るので、0 ベクトルでも発散しない）。長さも別の出力で出す。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Math/NormalizeRGB.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Math/PositionsPairDist/">PositionsPairDist</a></td>
+<td>1 行 N 画素の点（RGB = 位置）から、全ペアの差を N×N の画像で出す。画素 (i, j) に点 i と点 j の差を入れる。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Math/PositionsPairDist.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Math/SafeDivide/">SafeDivide</a></td>
+<td>in1 ÷ in2 をチャンネルごとに、0 で割らないように出す（in1 × SafeInverse(in2)）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Math/SafeDivide.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Math/SafeDivideAlpha/">SafeDivideAlpha</a></td>
+<td>in1 の RGBA 全部を、in2 のアルファで割る（0 で割らない）。重みの合計で割って平均にするときに使う。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Math/SafeDivideAlpha.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Image/Math/SafeInverse/">SafeInverse</a></td>
+<td>各チャンネルの逆数 1/x を、0 で割らないように出す: sign(x) / max(|x|, Eps)。0 は 0 のまま。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Image/Math/SafeInverse.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="learningaudio">Learning/Audio<a class="headerlink" href="#learningaudio" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Learning/Audio/SpectAE/">SpectAE</a></td>
+<td>スペクトルを bin ごとに移動平均・分散で正規化してから 1 本のベクトルに並べ、MLP のオートエンコーダで自分自身を再構成するよう、毎フレーム学習します。</td>
+<td>DotCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Audio/SpectAE.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/Audio/SpectUNet/">SpectUNet</a></td>
+<td>スペクトルを bin ごとに移動平均・分散で正規化し、1 次元の UNet(畳み込み)で自分自身を再構成するよう、毎フレーム学習します。入力への勾配 |dL/d</td>
+<td>Col2ImCHOP, DotCHOP, Im2ColCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Audio/SpectUNet.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="learningautovj">Learning/AutoVJ<a class="headerlink" href="#learningautovj" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Learning/AutoVJ/AutoVJ/">AutoVJ</a></td>
+<td>映像と音から、VJ のパラメータ Nump 個（0〜1）を出し、その場で学習し続けるネット。目的は「映像の情報の差分」と「音の情報の差分」の大きさの同期（相対的</td>
+<td>Col2ImCHOP, DotCHOP, Im2ColCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/AutoVJ/AutoVJ.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/AutoVJ/AutoVJS/">AutoVJS</a></td>
+<td>映像と音のスペクトルから、VJ のパラメータ Nump 個（0〜1）を出し、その場で学習し続けるネット。AutoVJ の改良版で、「変化の量」の代わりに「驚き（</td>
+<td>Col2ImCHOP, DotCHOP, Im2ColCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/AutoVJ/AutoVJS.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="learningembedding">Learning/Embedding<a class="headerlink" href="#learningembedding" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Learning/Embedding/SimpleEmbedding/">SimpleEmbedding</a></td>
+<td>オーディオを Echo State Network（リザバー）に通して、埋め込みベクトルにする。入力の各チャンネルを、毎フレームの音で更新されるリザバーの状態（</td>
+<td>DotCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Embedding/SimpleEmbedding.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/Embedding/SimpleImageEmbedding/">SimpleImageEmbedding</a></td>
+<td>画像の各画素の色（R, G, B）を毎フレーム、小さなリザバー（SimpleEmbedding、3 次元）に通して、画素ごとの埋め込みを色にした画像を作る（時間</td>
+<td>DotCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Embedding/SimpleImageEmbedding.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/Embedding/UMAPEmbedding/">UMAPEmbedding</a></td>
+<td>Online parametric UMAP built from the AutoDiff components. Each input channel is</td>
+<td>DotCHOP</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Embedding/UMAPEmbedding.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="learningonline">Learning/Online<a class="headerlink" href="#learningonline" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Learning/Online/InfoDiff/">InfoDiff</a></td>
+<td>入力の「情報の差分」の大きさ。各要素（チャンネル × サンプルのそれぞれ）の 1 フレームの差分 Δx を、その要素のオンラインの平均・分散で 1σ に正規化し</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Online/InfoDiff.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/Online/OnlineGHA/">OnlineGHA</a></td>
+<td>入力をオンライン PCA（Sanger 則 / 一般化ヘブ則 GHA）で k 個の主成分に埋め込む。y = W(x − μ)、W ← W + η(y xᵀ −</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Online/OnlineGHA.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/Online/OnlineRLS/">OnlineRLS</a></td>
+<td>線形回帰 y ≈ θ · [f, 1] を、忘却つきの逐次最小二乗（RLS）で毎フレーム更新する。最後の係数がバイアス。新しいデータほど重く、実効的な窓は 1/</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Online/OnlineRLS.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/Online/OnlineStandardize/">OnlineStandardize</a></td>
+<td>入力の各要素（チャンネル × サンプルのそれぞれ）を、その要素のオンラインの平均と分散で標準化する: z = (x − μ)/√(v + 10^Floorlog</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Online/OnlineStandardize.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="learningvisualize">Learning/Visualize<a class="headerlink" href="#learningvisualize" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Learning/Visualize/ConvEdges/">ConvEdges</a></td>
+<td>畳み込み層（NNConv2d、パディングなし）のつながりを、3 次元の線の POP にする。出力の各画素・各チャンネルから、カーネルが見ている入力のパッチ（K</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Visualize/ConvEdges.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/Visualize/ConvVolume/">ConvVolume</a></td>
+<td>畳み込みネットの 1 つの層の特徴マップ（高さ × 幅 × チャンネル）を、3 次元の点の POP にする（値 1 つにつき点 1 つ）。各チャンネルの W ×</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Visualize/ConvVolume.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/Visualize/LayerEdges/">LayerEdges</a></td>
+<td>ネットの層と層の間の重みを、線の POP にする（重み 1 つにつき線 1 本）。前の層のノード（x = Xfrom、y = Yfrom ± Hfrom に並ぶ</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Visualize/LayerEdges.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/Visualize/LayerNodes/">LayerNodes</a></td>
+<td>ネットの 1 つの層のノードを、点の POP にする（値 1 つにつき点 1 つ）。x = X、y = Y ± H に縦に並べ、活性で明るさと大きさを変える。L</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Visualize/LayerNodes.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/Visualize/NNLinearView/">NNLinearView</a></td>
+<td>全結合層（NNLinear）のノードと重みを、POP でリアルタイムに描く。左に入力のノード、右に出力のノードを縦に並べ、入力 i と出力 j を結ぶ線を重み</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Visualize/NNLinearView.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Learning/Visualize/NetGraph/">NetGraph</a></td>
+<td>ネットの層と重みを、表に書くだけで自動で並べて描く（ニューラルネットの可視化）。layers の行ごとに層のノード（LayerNodes）を、edges の行ご</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Learning/Visualize/NetGraph.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="math">Math<a class="headerlink" href="#math" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Math/AbsClamp/">AbsClamp</a></td>
+<td>値を −Scale〜Scale に抑える（はみ出したサンプルは ±Scale に、内側はそのまま）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/AbsClamp.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/AllAnalyze/">AllAnalyze</a></td>
+<td>全チャンネル・全サンプルをまとめて 1 つの値にする（Operation で合計・平均・最大・最小）。Analyze CHOP（サンプル方向）と Math CH</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/AllAnalyze.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/ColRowToIdx/">ColRowToIdx</a></td>
+<td>列と行の番号から、1 次元の通し番号を出す: idx = 列 + 行 × Colmax。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/ColRowToIdx.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/Digamma/">Digamma</a></td>
+<td>ディガンマ関数 ψ(x)（ln Γ の微分）の近似 ln(x − ½)。x が大きいほど正確（x = 11 で 2.3514、正しい値は 2.3518。x =</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/Digamma.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/Flip/">Flip</a></td>
+<td>サンプルの順番を逆にする（[a, b, c] → [c, b, a]）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/Flip.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/GaussianAffinity/">GaussianAffinity</a></td>
+<td>サンプルどうしの似ている度合いの行列（ガウス類似度）: 行列の (i, j) = exp(−(xᵢ − xⱼ)² / std(x))。N サンプルから N チャ</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/GaussianAffinity.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/GlobalStdNorm/">GlobalStdNorm</a></td>
+<td>フレームをまたいだ移動平均と移動分散（Alpha の指数移動平均）で、入力を標準化する: (x − 平均) / √分散。値の大きさが時間で変わる入力を、だいたい</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/GlobalStdNorm.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/HoldFeedback/">HoldFeedback</a></td>
+<td>in1 を Rate の間隔でサンプル＆ホールドし、in2 を初期値にしてフィードバックで回す（一定間隔で状態を進めるシミュレーションのクロック）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/HoldFeedback.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/LGamma/">LGamma</a></td>
+<td>ガンマ関数の対数 ln Γ(x) の近似（スターリングの公式 (x − ½)·ln x − x + ½·ln 2π + 1/(12x)）。x が大きいほど正確（</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/LGamma.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/LogSoftmax/">LogSoftmax</a></td>
+<td>ソフトマックスの対数: (x − max)/T − ln Σ exp((x − max)/T)。確率の対数が要る学習の損失（交差エントロピー）に使う。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/LogSoftmax.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/MinClamp/">MinClamp</a></td>
+<td>下限でクリップする: max(x, Min)。0 で割る・log(0) を避けるための下限に使う。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/MinClamp.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/Mod/">Mod</a></td>
+<td>床関数の余り x − floor(x/m)·m と商 floor(x/m)。余りは常に 0〜m（負の数でも正の余り）。割る数 m は in2 の CHOP で与</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/Mod.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/PeriodicTanh/">PeriodicTanh</a></td>
+<td>角度の列を、なめらかな矩形波 tanh(k·sin θ) / tanh(k) にする（k = Constk が大きいほど矩形に近く、小さいほど正弦波に近い）。入</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/PeriodicTanh.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/Random/">Random</a></td>
+<td>乱数の行列（Sizeh チャンネル × Sizew サンプル。TOP と同じく w が横 = サンプル、h が縦 = チャンネル）。Mode 0 で一様乱数（M</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/Random.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/Sigmoid/">Sigmoid</a></td>
+<td>シグモイド 1 / (1 + exp(−Gain·x))。0〜1 のなめらかなスイッチ（x = 0 で 0.5）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/Sigmoid.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/Softmax/">Softmax</a></td>
+<td>サンプルの列 x のソフトマックス: exp((x − max)/T) / Σ exp((x − max)/T)。合計が 1 の確率の列になる（max を引いて</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/Softmax.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/Std/">Std</a></td>
+<td>サンプルの列の標準偏差（母標準偏差 √(平均((x − 平均)²))）を 1 サンプルで出す。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/Std.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/Threshold/">Threshold</a></td>
+<td>しきい値より上（Lower で下）を 1、それ以外を 0 にする。Inclusive でしきい値ちょうども含める。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/Threshold.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/TimeLayerNorm/">TimeLayerNorm</a></td>
+<td>時間方向のレイヤー正規化: 直近 10 フレームの、チャンネル平均の平均と標準偏差で入力を標準化する（だいたい −1〜1 に収まる z スコア）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/TimeLayerNorm.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/TorusMod/">TorusMod</a></td>
+<td>値を 0〜Max の範囲にループさせる（トーラス状の巻き戻し: ((x mod Max) + Max) mod Max）。Max は in2 で与えるか、繋がな</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/TorusMod.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mathmatrix">Math/Matrix<a class="headerlink" href="#mathmatrix" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Math/Matrix/RotMatrix2D/">RotMatrix2D</a></td>
+<td>2 次元の回転行列を 2×2 の表（Table DAT）で出す: [[cos θ, sin θ], [−sin θ, cos θ]]。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/Matrix/RotMatrix2D.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/Matrix/SobelKernel/">SobelKernel</a></td>
+<td>Sobel フィルタの 3×3 の係数の表。outX = [[−1, 0, 1], [−2, 0, 2], [−1, 0, 1]]（横方向の勾配）、outY は</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/Matrix/SobelKernel.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Math/Matrix/SpectralRadius/">SpectralRadius</a></td>
+<td>行列 W のスペクトル半径（いちばん大きい固有値の絶対値）を求める（numpy で正確に計算。W が変わったときだけ計算し直す）。リザバー計算などで、重み行列の</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Math/Matrix/SpectralRadius.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sequence">Sequence<a class="headerlink" href="#sequence" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Sequence/BeatBase/">BeatBase</a></td>
+<td>ドラムのステップシーケンサーの 1 パート。時間（in1、秒）から、拍子・細分化・スウィング・ユークリッドリズムで決まるタイミングに 0/1 のゲートを出す。E</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Sequence/BeatBase.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Sequence/ValueToTrigger/">ValueToTrigger</a></td>
+<td>値を Bins 個のビン（Min〜Max を等間隔に分けた点）のうち、いちばん近いもののワンホットにする。値をノートやボタンの番号に振り分けるのに使う。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Sequence/ValueToTrigger.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="simulationboid">Simulation/Boid<a class="headerlink" href="#simulationboid" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Simulation/Boid/Boid/">Boid</a></td>
+<td>ボイド（群れのシミュレーション）。Points 個の点を円の上に置き、ランダムな速度を与えて、フィードバックで毎フレーム次の 4 つの力を足して動かす。鳥や魚の</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/Boid/Boid.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Simulation/Boid/BoidOut/">BoidOut</a></td>
+<td>CHOP の位置・速度から、BoidSimulationStep をフィードバックで回して、ボイドの位置を CHOP（x, y, z）で出す。Reset がオン</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/Boid/BoidOut.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Simulation/Boid/BoidSimulationStep/">BoidSimulationStep</a></td>
+<td>GPU（TOP）のボイドの 1 ステップ。全ペアの距離を正規化して、距離の帯ごとに力を切り替える。近い（&lt; Septhres）と分離、中くらい（&lt; Alithr</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/Boid/BoidSimulationStep.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Simulation/Boid/SteerRGB/">SteerRGB</a></td>
+<td>舵取りの力（Reynolds の steering）: 目標の速度 dst − 今の速度 src を、長さ Max 以下に抑えて出す。ボイドなどで「向きたい方向</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/Boid/SteerRGB.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="simulationgalaxy">Simulation/Galaxy<a class="headerlink" href="#simulationgalaxy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Simulation/Galaxy/GalaxyBase/">GalaxyBase</a></td>
+<td>銀河の初期状態の点群。中心のバルジ（球状、全体の Bulgerate の割合）と、ThinDisk で作る円盤から成る。円盤の点には、中心の重力とつり合う回転速</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/Galaxy/GalaxyBase.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Simulation/Galaxy/SoftenCenterGravityAcc/">SoftenCenterGravityAcc</a></td>
+<td>点群の重心に向かう重力の加速度を、各点に書き込む（ソフトニング付き: a = −Gm·(P−c) / (|P−c|² + Soft²)^(3/2)、c = 全点</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/Galaxy/SoftenCenterGravityAcc.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Simulation/Galaxy/SoftenCenterGravityVel/">SoftenCenterGravityVel</a></td>
+<td>点群の重心のまわりを回る円軌道の速度を、各点に書き込む: Vel = (Up × d) · √(Gm / (|d|² + Soft²)^(3/2))（d = P</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/Galaxy/SoftenCenterGravityVel.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Simulation/Galaxy/ThinDisk/">ThinDisk</a></td>
+<td>薄い円盤状の点群（銀河の円盤など）。半径方向は指数分布（中心ほど密）、厚みは Height で、外側ほど厚くなる（Flare）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/Galaxy/ThinDisk.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="simulationlifegame">Simulation/LifeGame<a class="headerlink" href="#simulationlifegame" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Simulation/LifeGame/NeighborLifeGame/">NeighborLifeGame</a></td>
+<td>ライフゲームの 1 世代分。状態（0/1 の列）と、各セルの近傍の番号の表から、次の状態を出す。近傍が Under 以下か Over 以上で死、死んだセルは近傍</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/LifeGame/NeighborLifeGame.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Simulation/LifeGame/RawNeighborLifeGame/">RawNeighborLifeGame</a></td>
+<td>ライフゲームの 1 世代の計算の中身。各セルの近傍の生きている数（環境）を数え、外から与えたルールで次の状態を作る: 次 = 生 × (1 − 死のルール) +</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/LifeGame/RawNeighborLifeGame.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Simulation/LifeGame/SimpleLifeGame/">SimpleLifeGame</a></td>
+<td>ライフゲームの 1 世代の計算の中身。各セルの近傍の生きている数（環境）を数え、外から与えたルールで次の状態を作る: 次 = 生 × 生存のルール + 死 ×</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/LifeGame/SimpleLifeGame.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Simulation/LifeGame/SquareLifeGame/">SquareLifeGame</a></td>
+<td>正方格子のライフゲーム（Sizew × Sizeh）。ランダムな初期状態から、Hz の速さで世代を進める。8 近傍（自分は数えない）で、近傍が Under 以下</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/LifeGame/SquareLifeGame.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Simulation/LifeGame/SquareLifeGameNeighborIdx/">SquareLifeGameNeighborIdx</a></td>
+<td>正方格子（Sizew × Sizeh）の各セルの 8 近傍の番号の表を作る（NeighborLifeGame の inNeighborIdx 用）。端の扱いを</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/LifeGame/SquareLifeGameNeighborIdx.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="simulationpopulation">Simulation/Population<a class="headerlink" href="#simulationpopulation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Simulation/Population/BirthDistribution/">BirthDistribution</a></td>
+<td>年齢の属性から、その年齢の出生率（1 年あたり、年齢別出生率）を点ごとに出す（人口シミュレーション用）。曲線は Range1 歳から始まるガンマ分布の形で、平均</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/Population/BirthDistribution.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Simulation/Population/MarriageDistribution/">MarriageDistribution</a></td>
+<td>年齢の属性から、その年齢の初婚率（1 年あたり）を点ごとに出す（人口シミュレーション用）。Coale–McNeil の標準的な初婚の曲線: g(a) = Mra</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/Population/MarriageDistribution.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="simulationreactiondiffusion">Simulation/ReactionDiffusion<a class="headerlink" href="#simulationreactiondiffusion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Simulation/ReactionDiffusion/GrayScott/">GrayScott</a></td>
+<td>Gray-Scott 反応拡散のシミュレーション。2 種類の物質 u, v が拡散しながら反応する式（∂u/∂t = Du∇²u − uv² + F(1−u)、</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/ReactionDiffusion/GrayScott.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="simulation">Simulation<a class="headerlink" href="#simulation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Simulation/SpeedUpdate/">SpeedUpdate</a></td>
+<td>速度と位置を 1 ステップ進める（シンプレクティック・オイラー法: Vel += Acc·Dt、P += Vel·Dt）。中にフィードバックはないので、Feed</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Simulation/SpeedUpdate.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="uv">UV<a class="headerlink" href="#uv" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="UV/PrintGalleryUV/">PrintGalleryUV</a></td>
+<td>エッシャー「版画画廊」風の、ドロステ効果（無限に入れ子になる渦）の UV マップ。対数極座標で画像をらせん状に繰り返す。Remap TOP で画像に当てると、画</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/UV/PrintGalleryUV.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="UV/RTheta/">RTheta</a></td>
+<td>極座標マップ。r チャンネルに中心からの距離、g チャンネルに角度（0〜1 で一周）を入れた画像を作る。Remap に使うと画像を極座標に展開でき、ramp や</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/UV/RTheta.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="UV/identifyUV/">identifyUV</a></td>
+<td>恒等 UV マップ（各ピクセルに自分の座標を入れた画像）を作る。r = u（左 0 → 右 1）、g = v（下 0 → 上 1）、b = 0、a = 1。Re</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/UV/identifyUV.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="UV/lineDrawer/">lineDrawer</a></td>
+<td>点列 CHOP を折れ線として画像の上に描く（GLSL）。Start〜End で線全体の長さのどの区間を描くかを決めるので、0→1 にアニメーションすると線が伸</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/UV/lineDrawer.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="UV/mandalaUV/">mandalaUV</a></td>
+<td>万華鏡（マンダラ）状の UV マップ。角度を鏡映しながら N 回くり返した値を r に、中心からの距離を折り返した値を g に入れる。Remap TOP で画像</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/UV/mandalaUV.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="UV/pinholeRadtan/">pinholeRadtan</a></td>
+<td>カメラのレンズ歪み（Brown-Conrady モデル: 半径方向 k1, k2 と接線方向 p1, p2）をかけた UV マップを作る。Remap TOP で</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/UV/pinholeRadtan.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="utility">Utility<a class="headerlink" href="#utility" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Utility/FrameDelay/">FrameDelay</a></td>
+<td>入力の CHOP を Frames フレーム遅らせて出す（形・チャンネル名はそのまま）。「1 フレーム前の値」が要るときに使う（差分、時刻をそろえる、など）。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Utility/FrameDelay.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="visualize">Visualize<a class="headerlink" href="#visualize" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パレット</th>
+<th>内容</th>
+<th>依存プラグイン</th>
+<th>ダウンロード</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Visualize/ChannelLissajous/">ChannelLissajous</a></td>
+<td>CHOP の 1 番目のチャンネルを x、2 番目を y にして点を線で結んだ図（XY スコープ）を描く。タイムスライスを Samples 個に間引いてから描く</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Visualize/ChannelLissajous.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Visualize/Goniometer/">Goniometer</a></td>
+<td>ゴニオメーター（ステレオの位相・広がりを見るスコープ）。L−R を横、L+R を縦にして（1/√2 倍で 45° 回した形）点で描く。モノラルの音は縦の線、逆相</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Visualize/Goniometer.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Visualize/HzLissajous3D/">HzLissajous3D</a></td>
+<td>Lissajous を奥行き方向に伸ばした 3D の線。t に沿って z を 0 → −Depth に進め、手前から奥へ色（Color → ColorEnd）と</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Visualize/HzLissajous3D.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Visualize/HzLissajousAnimated/">HzLissajousAnimated</a></td>
+<td>Lissajous の、位相が時間で回る版。x と y の位相を、それぞれの周波数（in1, in2 の値）の速さで進めるので、図形が回転・変形して動き続ける。</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Visualize/HzLissajousAnimated.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Visualize/Lissajous/">Lissajous</a></td>
+<td>2 つの値を x と y の周波数比にしたリサジュー図形を描く: x = cos(2π·a·t)、y = sin(2π·b·t)（t = 0〜1）。a は in</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Visualize/Lissajous.tox">.tox</a></td>
+</tr>
+<tr>
+<td><a href="Visualize/PlanckianLocus/">PlanckianLocus</a></td>
+<td>黒体放射の色（色温度）の横グラデーション。横軸は 1667 K（左端）〜 25000 K（右端）の等間隔で、6500 K（昼光の白）が 0.207 の位置。色は</td>
+<td>—</td>
+<td><a href="https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/Visualize/PlanckianLocus.tox">.tox</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.indexes", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../assets/tdp.js"></script>
+      
+    
+  </body>
+</html>

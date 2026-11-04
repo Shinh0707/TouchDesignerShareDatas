@@ -1,0 +1,24 @@
+.tdp-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 4px solid var(--md-primary-fg-color);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+}
+.tdp-card--preview { border-left-color: #e0a100; }
+.tdp-card__title { font-weight: 700; margin-bottom: 0.5rem; }
+.tdp-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tdp-btn {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 4px;
+  border: 1px solid var(--md-primary-fg-color);
+  color: var(--md-primary-fg-color) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+.tdp-btn:hover { background: var(--md-primary-fg-color--transparent, rgba(0, 0, 0, 0.05)); }
+.tdp-btn--mine { background: var(--md-primary-fg-color); color: var(--md-primary-bg-color) !important; }
+.tdp-btn--none { border-style: dashed; opacity: 0.6; color: inherit !important; }
+.tdp-note { font-size: 0.85em; opacity: 0.85; margin: 0.4rem 0; }
+.tdp-more { font-size: 0.85em; }
