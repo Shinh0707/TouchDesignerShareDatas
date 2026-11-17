@@ -21,7 +21,10 @@ TouchDesignerの左側のタブにあるプリセットみたいなやつです.
 
 - [AudioQuantizeRate](Palettes/Audio/Feature/AudioQuantizeRate.tox) — オーディオが Q ビットの段（±1 を 2^Q − 1 段に分けた格子）にどれだけ乗っているか（ビットクラッシュ・ローフ… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/AudioQuantizeRate/), [使用例](Palettes/Audio/Feature/AudioQuantizeRateExample.toe))
 - [CrestFactor](Palettes/Audio/Feature/CrestFactor.tox) — クレストファクター（ピーク ÷ RMS）。音のとがり具合（打撃音ほど大きく、正弦波で √2 ≈ 1.41、矩形波で 1）… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/CrestFactor/), [使用例](Palettes/Audio/Feature/CrestFactorExample.toe))
+- [MFCCDistance](Palettes/Audio/Feature/MFCCDistance.tox) — 2 つの音の音色の違いを 1 つの数で出す（MFCC の L1 距離）。2 つの MFCC の差の絶対値を、係数について… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/MFCCDistance/), [使用例](Palettes/Audio/Feature/MFCCDistanceExample.toe))
+- [PerceptualSimilarity](Palettes/Audio/Feature/PerceptualSimilarity.tox) — 2 つの音が、聴いてどれだけ似ているかを 0〜100 で出す（知覚類似度）。100 = 聞き分けられない、70 未満 =… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/PerceptualSimilarity/), [使用例](Palettes/Audio/Feature/PerceptualSimilarityExample.toe))
 - [RMSNorm](Palettes/Audio/Feature/RMSNorm.tox) — RMS で割って大きさをそろえる（x / RMS(x)）。音量によらない波形の形を比べたいときに使う。   ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/RMSNorm/), [使用例](Palettes/Audio/Feature/RMSNormExample.toe))
+- [SimilarityRating](Palettes/Audio/Feature/SimilarityRating.tox) — MFCC の距離を、聴取実験（MUSHRA）の評価の予測 0〜100 に変換する。100 = 基準と聞き分けられない、7… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/SimilarityRating/), [使用例](Palettes/Audio/Feature/SimilarityRatingExample.toe))
 - [VU](Palettes/Audio/Feature/VU.tox) — VU メーター。整流した信号を 2 次のフィルタ（減衰比 Dump、固有角周波数 Angf：VU 規格の約 300 ms… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/VU/), [使用例](Palettes/Audio/Feature/VUExample.toe))
 - [ZCR](Palettes/Audio/Feature/ZCR.tox) — ゼロ交差率（隣り合うサンプルで符号が変わる割合）。ノイズや高い音ほど大きく、低い音ほど小さい。   ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/ZCR/), [使用例](Palettes/Audio/Feature/ZCRExample.toe))
 - [F0](Palettes/Audio/Pitch/F0.tox) — 基本周波数（音の高さ）を Hz で推定する。参照したスペクトルの上で、Fmin〜Fmax の候補ごとに、その 1〜12 … ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Pitch/F0/), [使用例](Palettes/Audio/Pitch/F0Example.toe))
@@ -34,7 +37,9 @@ TouchDesignerの左側のタブにあるプリセットみたいなやつです.
 - [FFTSize](Palettes/Audio/Spectrum/FFTSize.tox) — 参照した Audio Spectrum CHOP の FFT サイズ N（= 2^(fftsize+6)）を定数で出す。… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/FFTSize/), [使用例](Palettes/Audio/Spectrum/FFTSizeExample.toe))
 - [LogBinFrequency](Palettes/Audio/Spectrum/LogBinFrequency.tox) — ビン周波数を対数（オクターブ）軸に変換した x_k = log2(f_k) を出す。log2 の前に f_k を Fcl… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/LogBinFrequency/), [使用例](Palettes/Audio/Spectrum/LogBinFrequencyExample.toe))
 - [LogRemap](Palettes/Audio/Spectrum/LogRemap.tox) — サンプルの横軸を対数にとり直す（等間隔の周波数ビン → 対数の周波数軸）。出力の横位置 t (0〜1) が元の列の位置 … ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/LogRemap/), [使用例](Palettes/Audio/Spectrum/LogRemapExample.toe))
+- [MFCC](Palettes/Audio/Spectrum/MFCC.tox) — メル周波数ケプストラム係数（MFCC）。音色（スペクトルのおおまかな形）を、少ない数の値で表す。MelSpectrum … ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/MFCC/), [使用例](Palettes/Audio/Spectrum/MFCCExample.toe))
 - [MagnitudeDb](Palettes/Audio/Spectrum/MagnitudeDb.tox) — スペクトル振幅をデシベル y_k = 20·log10(|X_k|) に変換する。振幅は 0.001 で下限クランプ（-… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/MagnitudeDb/), [使用例](Palettes/Audio/Spectrum/MagnitudeDbExample.toe))
+- [MelSpectrum](Palettes/Audio/Spectrum/MelSpectrum.tox) — オーディオの最新のフレームを、メル尺度の帯域パワー（メルスペクトル）にする。低い音は細かく、高い音は粗く分けるので、耳の… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/MelSpectrum/), [使用例](Palettes/Audio/Spectrum/MelSpectrumExample.toe))
 - [PowerSpectrum](Palettes/Audio/Spectrum/PowerSpectrum.tox) — 各サンプルの 2 乗 |x|²（振幅スペクトル → パワースペクトル）。   ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/PowerSpectrum/), [使用例](Palettes/Audio/Spectrum/PowerSpectrumExample.toe))
 - [SpectralCentroid](Palettes/Audio/Spectrum/SpectralCentroid.tox) — スペクトル重心（明るさの指標）を Hz で出す。重心 = Σ E_k f_k / Σ E_k、E_k = |X_k|²。… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/SpectralCentroid/), [使用例](Palettes/Audio/Spectrum/SpectralCentroidExample.toe))
 - [SpectralCentroidNorm](Palettes/Audio/Spectrum/SpectralCentroidNorm.tox) — スペクトル重心をナイキスト周波数で割って 0〜1 に正規化したもの: (Σ E_k f_k / Σ E_k) / (fs… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/SpectralCentroidNorm/), [使用例](Palettes/Audio/Spectrum/SpectralCentroidNormExample.toe))
@@ -206,6 +211,7 @@ TouchDesignerの左側のタブにあるプリセットみたいなやつです.
 - [Lissajous](Palettes/Visualize/Lissajous.tox) — 2 つの値を x と y の周波数比にしたリサジュー図形を描く: x = cos(2π·a·t)、y = sin(2π·… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/Lissajous/), [使用例](Palettes/Visualize/LissajousExample.toe))
 - [PlanckianLocus](Palettes/Visualize/PlanckianLocus.tox) — 黒体放射の色（色温度）の横グラデーション。横軸は 1667 K（左端）〜 25000 K（右端）の等間隔で、6500 K… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/PlanckianLocus/), [使用例](Palettes/Visualize/PlanckianLocusExample.toe))
 <!-- tdp:palettes:end -->
+  
   
   
   
