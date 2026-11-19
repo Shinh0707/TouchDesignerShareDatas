@@ -204,6 +204,8 @@ Descriptions, parameters, examples and required plugins are on the [palette list
 - [mandalaUV](Palettes/UV/mandalaUV.tox) — 万華鏡（マンダラ）状の UV マップ。角度を鏡映しながら N 回くり返した値を r に、中心からの距離を折り返した値を … ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/UV/mandalaUV/), [使用例](Palettes/UV/mandalaUVExample.toe))
 - [pinholeRadtan](Palettes/UV/pinholeRadtan.tox) — カメラのレンズ歪み（Brown-Conrady モデル: 半径方向 k1, k2 と接線方向 p1, p2）をかけた U… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/UV/pinholeRadtan/), [使用例](Palettes/UV/pinholeRadtanExample.toe))
 - [FrameDelay](Palettes/Utility/FrameDelay.tox) — 入力の CHOP を Frames フレーム遅らせて出す（形・チャンネル名はそのまま）。「1 フレーム前の値」が要るとき… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Utility/FrameDelay/), [使用例](Palettes/Utility/FrameDelayExample.toe))
+- [BoxCrop](Palettes/Visualize/BoxCrop.tox) — 箱の一覧(CHOP)が指す場所を画像から切り出して、同じ大きさのマスに並べる。検出したものを小さく並べて見せる表示や、箱… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/BoxCrop/), [使用例](Palettes/Visualize/BoxCropExample.toe))
+- [BoxOverlay](Palettes/Visualize/BoxOverlay.tox) — 箱の一覧(CHOP)を、枠・ラベルとして画像に重ねて描く。検出枠やデータ表示の演出の「描く」部分で、箱をどう見つけたかに… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/BoxOverlay/), [使用例](Palettes/Visualize/BoxOverlayExample.toe))
 - [ChannelLissajous](Palettes/Visualize/ChannelLissajous.tox) — CHOP の 1 番目のチャンネルを x、2 番目を y にして点を線で結んだ図（XY スコープ）を描く。タイムスライス… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/ChannelLissajous/), [使用例](Palettes/Visualize/ChannelLissajousExample.toe))
 - [Goniometer](Palettes/Visualize/Goniometer.tox) — ゴニオメーター（ステレオの位相・広がりを見るスコープ）。L−R を横、L+R を縦にして（1/√2 倍で 45° 回した… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/Goniometer/), [使用例](Palettes/Visualize/GoniometerExample.toe))
 - [HzLissajous3D](Palettes/Visualize/HzLissajous3D.tox) — Lissajous を奥行き方向に伸ばした 3D の線。t に沿って z を 0 → −Depth に進め、手前から奥へ… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/HzLissajous3D/), [使用例](Palettes/Visualize/HzLissajous3DExample.toe))
@@ -211,6 +213,7 @@ Descriptions, parameters, examples and required plugins are on the [palette list
 - [Lissajous](Palettes/Visualize/Lissajous.tox) — 2 つの値を x と y の周波数比にしたリサジュー図形を描く: x = cos(2π·a·t)、y = sin(2π·… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/Lissajous/), [使用例](Palettes/Visualize/LissajousExample.toe))
 - [PlanckianLocus](Palettes/Visualize/PlanckianLocus.tox) — 黒体放射の色（色温度）の横グラデーション。横軸は 1667 K（左端）〜 25000 K（右端）の等間隔で、6500 K… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/PlanckianLocus/), [使用例](Palettes/Visualize/PlanckianLocusExample.toe))
 <!-- tdp:palettes:end -->
+  
   
   
   
