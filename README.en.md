@@ -115,6 +115,7 @@ Descriptions, parameters, examples and required plugins are on the [palette list
 - [CrossFade](Palettes/Image/Effect/CrossFade.tox) — 映像の残像・なめらかさ（時間方向のクロスフェード）。前のフレームの結果と今の入力を Crsr の割合で混ぜ続ける（フィー… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Effect/CrossFade/), [使用例](Palettes/Image/Effect/CrossFadeExample.toe))
 - [CurlNoise](Palettes/Image/Effect/CurlNoise.tox) — カールノイズの流れで画像を流す（液体・煙のように渦を巻いて流れる歪み）。ポテンシャル（ノイズ画像）の勾配を 90° 回し… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Effect/CurlNoise/), [使用例](Palettes/Image/Effect/CurlNoiseExample.toe))
 - [CurlNoiseFlow](Palettes/Image/Effect/CurlNoiseFlow.tox) — カールノイズの流れで画像を流す（Image/Effect/CurlNoise の発展版）。ポテンシャルを 0〜1 に正規… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Effect/CurlNoiseFlow/), [使用例](Palettes/Image/Effect/CurlNoiseFlowExample.toe))
+- [Datamosh](Palettes/Image/Effect/Datamosh.tox) — データモッシュ（mp4 の処理落ちで、前の映像が部分的に残ったまま動きに引きずられる乱れ）をリアルタイムで作る。動画の圧… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Effect/Datamosh/), [使用例](Palettes/Image/Effect/DatamoshExample.toe))
 - [ImagePopup](Palettes/Image/Effect/ImagePopup.tox) — 画像を何枚も、ランダムな位置にポップアップさせる。in2 の y0 チャンネルの各サンプルが画像 1 枚にあたり、その値… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Effect/ImagePopup/), [使用例](Palettes/Image/Effect/ImagePopupExample.toe))
 - [Pixelate](Palettes/Image/Effect/Pixelate.tox) — モザイク（ピクセル化）。画像を (1 − Rate) 倍の解像度に最近傍で縮めてから、元の解像度に最近傍で戻すので、四角… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Effect/Pixelate/), [使用例](Palettes/Image/Effect/PixelateExample.toe))
 - [RetroWindow](Palettes/Image/Effect/RetroWindow.tox) — 画像を昔のパソコン風のウィンドウの枠に入れる。角の丸い青いタイトルバーの枠と、右上の赤い閉じるボタン（×）を重ねる。   ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Effect/RetroWindow/), [使用例](Palettes/Image/Effect/RetroWindowExample.toe))
@@ -210,6 +211,7 @@ Descriptions, parameters, examples and required plugins are on the [palette list
 - [Lissajous](Palettes/Visualize/Lissajous.tox) — 2 つの値を x と y の周波数比にしたリサジュー図形を描く: x = cos(2π·a·t)、y = sin(2π·… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/Lissajous/), [使用例](Palettes/Visualize/LissajousExample.toe))
 - [PlanckianLocus](Palettes/Visualize/PlanckianLocus.tox) — 黒体放射の色（色温度）の横グラデーション。横軸は 1667 K（左端）〜 25000 K（右端）の等間隔で、6500 K… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/PlanckianLocus/), [使用例](Palettes/Visualize/PlanckianLocusExample.toe))
 <!-- tdp:palettes:end -->
+  
   
   
   
