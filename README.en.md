@@ -142,6 +142,7 @@ Descriptions, parameters, examples and required plugins are on the [palette list
 - [SpectUNet](Palettes/Learning/Audio/SpectUNet.tox) — スペクトルを bin ごとに移動平均・分散で正規化し、1 次元の UNet(畳み込み)で自分自身を再構成するよう、毎フレ… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Audio/SpectUNet/), [使用例](Palettes/Learning/Audio/SpectUNetExample.toe))
 - [AutoVJ](Palettes/Learning/AutoVJ/AutoVJ.tox) — 映像と音から、VJ のパラメータ Nump 個（0〜1）を出し、その場で学習し続けるネット。目的は「映像の情報の差分」と… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/AutoVJ/AutoVJ/), [使用例](Palettes/Learning/AutoVJ/AutoVJExample.toe))
 - [AutoVJS](Palettes/Learning/AutoVJ/AutoVJS.tox) — 映像と音のスペクトルから、VJ のパラメータ Nump 個（0〜1）を出し、その場で学習し続けるネット。AutoVJ の… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/AutoVJ/AutoVJS/), [使用例](Palettes/Learning/AutoVJ/AutoVJSExample.toe))
+- [DigitClassifier](Palettes/Learning/Classify/DigitClassifier.tox) — 手書きの数字(0〜9)を当てる、学習済みの小さなニューラルネット。BoxCrop で切り出した箱の中身(out2)をその… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Classify/DigitClassifier/), [使用例](Palettes/Learning/Classify/DigitClassifierExample.toe))
 - [SimpleEmbedding](Palettes/Learning/Embedding/SimpleEmbedding.tox) — オーディオを Echo State Network（リザバー）に通して、埋め込みベクトルにする。入力の各チャンネルを、毎… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Embedding/SimpleEmbedding/), [使用例](Palettes/Learning/Embedding/SimpleEmbeddingExample.toe))
 - [SimpleImageEmbedding](Palettes/Learning/Embedding/SimpleImageEmbedding.tox) — 画像の各画素の色（R, G, B）を毎フレーム、小さなリザバー（SimpleEmbedding、3 次元）に通して、画素… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Embedding/SimpleImageEmbedding/), [使用例](Palettes/Learning/Embedding/SimpleImageEmbeddingExample.toe))
 - [UMAPEmbedding](Palettes/Learning/Embedding/UMAPEmbedding.tox) — Online parametric UMAP built from the AutoDiff components. E… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Embedding/UMAPEmbedding/), [使用例](Palettes/Learning/Embedding/UMAPEmbeddingExample.toe))
@@ -213,6 +214,7 @@ Descriptions, parameters, examples and required plugins are on the [palette list
 - [Lissajous](Palettes/Visualize/Lissajous.tox) — 2 つの値を x と y の周波数比にしたリサジュー図形を描く: x = cos(2π·a·t)、y = sin(2π·… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/Lissajous/), [使用例](Palettes/Visualize/LissajousExample.toe))
 - [PlanckianLocus](Palettes/Visualize/PlanckianLocus.tox) — 黒体放射の色（色温度）の横グラデーション。横軸は 1667 K（左端）〜 25000 K（右端）の等間隔で、6500 K… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/PlanckianLocus/), [使用例](Palettes/Visualize/PlanckianLocusExample.toe))
 <!-- tdp:palettes:end -->
+  
   
   
   
