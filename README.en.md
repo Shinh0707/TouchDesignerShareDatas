@@ -111,6 +111,9 @@ Descriptions, parameters, examples and required plugins are on the [palette list
 - [TriangleRowIdx](Palettes/Geometry/TriangleTile/TriangleRowIdx.tox) — 大きな三角形を小さな三角形で敷き詰めたときの、通し番号 i から行の番号 j を出す。行 j には N − 2j 個の三… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Geometry/TriangleTile/TriangleRowIdx/), [使用例](Palettes/Geometry/TriangleTile/TriangleRowIdxExample.toe))
 - [TriangleTriangleTileIdx](Palettes/Geometry/TriangleTile/TriangleTriangleTileIdx.tox) — 三角形の中の三角形タイルの通し番号を、(j, i)（j = 段、i = 段の中の位置）に変える。InverseTrian… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Geometry/TriangleTile/TriangleTriangleTileIdx/), [使用例](Palettes/Geometry/TriangleTile/TriangleTriangleTileIdxExample.toe))
 - [TriangleTriangleTilesNeighbors](Palettes/Geometry/TriangleTile/TriangleTriangleTilesNeighbors.tox) — 三角形の中の三角形タイルで、各タイル (j, i) の隣（左右と、上か下の 3 つ）の通し番号を出す。上向き（i が偶数… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Geometry/TriangleTile/TriangleTriangleTilesNeighbors/), [使用例](Palettes/Geometry/TriangleTile/TriangleTriangleTilesNeighborsExample.toe))
+- [BlockDCT](Palettes/Image/Compression/BlockDCT.tox) — 画像のブロック DCT（離散コサイン変換）と、その逆変換。画像を Block × Block 画素のブロックに分け、ブロ… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Compression/BlockDCT/), [使用例](Palettes/Image/Compression/BlockDCTExample.toe))
+- [DCTQuantize](Palettes/Image/Compression/DCTQuantize.tox) — ブロック DCT の係数の量子化（粗く丸める）と、その逆。圧縮で情報を捨てる段にあたる。係数を「きざみ幅」で割って整数に… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Compression/DCTQuantize/), [使用例](Palettes/Image/Compression/DCTQuantizeExample.toe))
+- [ZigZag](Palettes/Image/Compression/ZigZag.tox) — ブロックの中をジグザグ順に並べ替える（JPEG のジグザグスキャン）と、その逆。Block × Block 画素のブロッ… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Compression/ZigZag/), [使用例](Palettes/Image/Compression/ZigZagExample.toe))
 - [BlackFrame](Palettes/Image/Effect/BlackFrame.tox) — 画像の縁を黒くぼかして落とす（額縁・周辺減光）。中央の四角（大きさ 1 − Borderwidth）だけを残し、その外側… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Effect/BlackFrame/), [使用例](Palettes/Image/Effect/BlackFrameExample.toe))
 - [CrossFade](Palettes/Image/Effect/CrossFade.tox) — 映像の残像・なめらかさ（時間方向のクロスフェード）。前のフレームの結果と今の入力を Crsr の割合で混ぜ続ける（フィー… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Effect/CrossFade/), [使用例](Palettes/Image/Effect/CrossFadeExample.toe))
 - [CurlNoise](Palettes/Image/Effect/CurlNoise.tox) — カールノイズの流れで画像を流す（液体・煙のように渦を巻いて流れる歪み）。ポテンシャル（ノイズ画像）の勾配を 90° 回し… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Effect/CurlNoise/), [使用例](Palettes/Image/Effect/CurlNoiseExample.toe))
@@ -215,6 +218,7 @@ Descriptions, parameters, examples and required plugins are on the [palette list
 - [Lissajous](Palettes/Visualize/Lissajous.tox) — 2 つの値を x と y の周波数比にしたリサジュー図形を描く: x = cos(2π·a·t)、y = sin(2π·… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/Lissajous/), [使用例](Palettes/Visualize/LissajousExample.toe))
 - [PlanckianLocus](Palettes/Visualize/PlanckianLocus.tox) — 黒体放射の色（色温度）の横グラデーション。横軸は 1667 K（左端）〜 25000 K（右端）の等間隔で、6500 K… ([説明](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Visualize/PlanckianLocus/), [使用例](Palettes/Visualize/PlanckianLocusExample.toe))
 <!-- tdp:palettes:end -->
+  
   
   
   
