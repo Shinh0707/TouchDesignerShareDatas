@@ -1,0 +1,84 @@
+<!-- https://shinh0707.github.io/TouchDesignerShareDatas/palettes/AutoDiff/DDiv/ -->
+
+# DDiv
+
+`AutoDiff` フォルダのパレットです。
+
+## 説明
+
+AutoDiff（CHOP で組んだ自動微分）の部品。割り算 y = a / b。D1 に「out1 についての損失の勾配 dL/dy」（out1 と同じ形の CHOP）を指すと、in1・in2 についての勾配を outD1・outD2 に出す（逆伝播）。
+
+入力
+
+- in1: in1 CHOP
+- in2: in2 CHOP（in1 と同じ形）
+
+出力
+
+- out1: f(a, b)
+- outD1: dL/da = dL/dy ÷ b
+- outD2: dL/db = −a · dL/dy ÷ b²
+
+パラメータ
+
+- D1: out1 についての勾配の CHOP
+
+## ダウンロード
+
+[DDiv.tox をダウンロード](https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/DDiv.tox) [使用例 DDivExample.toe](https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/DDivExample.toe)
+
+`.tox` はネットワークにドラッグ & ドロップするか、Palette の My Components に入れて使います([使い方](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/))。
+
+## 入力と出力
+
+| | 種類 | 名前 | 内容 |
+|---|---|---|---|
+| 入力 0 | CHOP | `in1` | Any |
+| 入力 1 | CHOP | `in2` | Any |
+| 出力 0 | CHOP | `out1` | Any |
+| 出力 1 | CHOP | `outD1` | Any / in1 についての勾配 |
+| 出力 2 | CHOP | `outD2` | Any / in2 についての勾配 |
+
+## パラメータ
+
+| Name | Label | Page | Type | Default | Menu / Range |
+|---|---|---|---|---|---|
+| `D1` | D1 | D | CHOP | `outD1` |  |
+
+## 使用例
+
+### 割り算とその勾配
+
+![割り算とその勾配](https://shinh0707.github.io/TouchDesignerShareDatas/assets/palettes/AutoDiff-DDiv-example.svg)
+
+a(−2〜2)÷ b(1〜2 の正弦波)(y)と、D1 に 1 を入れたときの勾配(grad_a = 1/b、grad_b = −a/b²)を並べた例です。
+
+ネットワーク: `in0` (patternCHOP: `channelname=v`, `wavetype=ramp`, `length=200`, `torange=[-2, 2]`) → `in1` (patternCHOP: `channelname=v`, `wavetype=sin`, `length=200`, `numcycles=1`, `amp=0.5`, `offset=1.5`) → `DDiv` (パレット) → `out1_raw` (selectCHOP: `chops=out1`) → `ones` (mathCHOP: `gain=0`, `postoff=1`) → `y` (renameCHOP: `renamefrom=*`, `renameto=y`) → `grad_a` (selectCHOP: `chops=outD1`) → `grad_a_named` (renameCHOP: `renamefrom=*`, `renameto=grad_a`) → `grad_b` (selectCHOP: `chops=outD2`) → `grad_b_named` (renameCHOP: `renamefrom=*`, `renameto=grad_b`) → `y_and_grad` (mergeCHOP) → `out1`
+
+[DDivExample.toe をダウンロード](https://github.com/Shinh0707/TouchDesignerShareDatas/raw/main/Palettes/AutoDiff/DDivExample.toe)
+
+??? note "手順(AutoDiff/DDiv.example.py)"
+
+    ```python
+    """割り算とその勾配
+
+    a(−2〜2)÷ b(1〜2 の正弦波)(y)と、D1 に 1 を入れたときの勾配(grad_a = 1/b、grad_b = −a/b²)を並べた例です。
+    """
+    import sys
+
+    sys.path.insert(0, __file__.split("/palettes/")[0] + "/palettes")
+    from _examples import forward_and_gradient  # noqa: E402
+
+    def build(ex, tox):
+        a = ex.input("patternCHOP", channelname="v", wavetype="ramp", length=200, torange=(-2, 2))
+        b = ex.input("patternCHOP", channelname="v", wavetype="sin", length=200, numcycles=1, amp=0.5, offset=1.5)
+        forward_and_gradient(ex, tox, a, b)
+    ```
+
+TouchDesigner で読み込んでエラーが出ないことを確認済み(2026-11-27)。
+
+## 依存プラグイン
+
+このパレットは TouchDesigner 標準のオペレータだけでできています。追加のプラグインは要りません。
+
+25 個のオペレータ。sha256: `9ea24dc25fdc9015…`

@@ -1,0 +1,96 @@
+<!-- https://shinh0707.github.io/TouchDesignerShareDatas/palettes/references/ -->
+
+# 出典・参考
+
+パレットとカスタム OP(プラグイン)のもとになった論文・書籍・ライブラリの一覧です。それぞれのページの「出典・参考」にも同じものが出ます。方法や定数を借りた先を示すもので、出典の内容を完全に再現していることを保証するものではありません。
+
+- N. Ahmed, T. Natarajan, K. R. Rao (1974). [Discrete Cosine Transform](https://doi.org/10.1109/T-C.1974.223784). IEEE Transactions on Computers C-23(1), 90-93.
+    - [BlockDCT](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Compression/BlockDCT/): DCT のもとの論文
+    - [DCTBasis](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Compression/DCTBasis/): DCT の基底
+    - [DctCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/DctCHOP/): DCT（DCT-II）のもとの論文
+- K. Asendorf (2010). [ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSort). GitHub (Processing).
+    - [PixcelSorterGlitchTOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/PixcelSorterGlitchTOP/): しきい値で区切った区間ごとにピクセルを並べ替える方法のもと
+    - [PixelArgSorterTOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/PixelArgSorterTOP/): しきい値で区切った区間ごとにピクセルを並べ替える方法のもと
+- L. Bluestein (1970). [A linear filtering approach to the computation of discrete Fourier transform](https://doi.org/10.1109/TAU.1970.1162132). IEEE Transactions on Audio and Electroacoustics 18(4), 451-455.
+    - [DctCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/DctCHOP/): 2 のべき乗でない長さの FFT（チャープ z 変換）
+- K. Chellapilla, S. Puri, P. Simard (2006). [High Performance Convolutional Neural Networks for Document Processing](https://inria.hal.science/inria-00112631). 10th International Workshop on Frontiers in Handwriting Recognition (IWFHR).
+    - [Im2ColCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/Im2ColCHOP/): 畳み込みを「パッチを並べた行列 × 重みの行列」の積に直す考え方
+- CIE (2004). Colorimetry, 3rd edition. CIE 15:2004.
+    - [ColorConvert](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Color/ColorConvert/): CIE 1976 L*a*b* の定義
+- TorchVision maintainers and contributors. [torchvision.datasets.MNIST](https://docs.pytorch.org/vision/main/generated/torchvision.datasets.MNIST.html).
+    - [DigitClassifier](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Classify/DigitClassifier/): 使ったデータの取得元
+- S. B. Davis, P. Mermelstein (1980). [Comparison of parametric representations for monosyllabic word recognition in continuously spoken sentences](https://doi.org/10.1109/TASSP.1980.1163420). IEEE Trans. Acoustics, Speech, and Signal Processing 28(4), 357-366.
+    - [MFCC](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/MFCC/): MFCC（メル帯域の対数エネルギーの DCT）のもとの論文
+- P. Deutsch (1996). [DEFLATE Compressed Data Format Specification version 1.3 (RFC 1951)](https://www.rfc-editor.org/rfc/rfc1951). IETF.
+    - [HuffmanCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/HuffmanCHOP/): 符号の長さだけを送って符号を決め直す方法（canonical Huffman code）
+- D. Gabor (1947). [Acoustical Quanta and the Theory of Hearing](https://doi.org/10.1038/159591a0). Nature 159, 591-594.
+    - [GranularCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/GranularCHOP/): 音を時間と周波数の小さな粒で捉える考え方の原点
+- M. Gardner (1970). [Mathematical Games: The fantastic combinations of John Conway's new solitaire game "life"](https://doi.org/10.1038/scientificamerican1070-120). Scientific American 223(4), 120-123.
+    - [LifeGameCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/LifeGameCHOP/): ライフゲームのルール(誕生 3、生存 2・3)
+    - [LifeGameTOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/LifeGameTOP/): ライフゲームのルール(誕生 3、生存 2・3)
+- P. Gray, S. K. Scott (1984). [Autocatalytic reactions in the isothermal, continuous stirred tank reactor: Oscillations and instabilities in the system A + 2B -> 3B; B -> C](https://doi.org/10.1016/0009-2509(84)87017-7). Chemical Engineering Science 39(6), 1087-1097.
+    - [GrayScott](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Simulation/ReactionDiffusion/GrayScott/): 反応の式（u + 2v -> 3v、v -> 不活性）
+- D. J. Hermes (1988). [Measurement of pitch by subharmonic summation](https://doi.org/10.1121/1.396427). J. Acoust. Soc. Am. 83(1), 257-264.
+    - [F0](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Pitch/F0/): 方法（subharmonic summation。倍音の位置の振幅を重みをつけて足し合わせる）
+- D. A. Huffman (1952). [A Method for the Construction of Minimum-Redundancy Codes](https://doi.org/10.1109/JRPROC.1952.273898). Proceedings of the IRE 40(9), 1098-1101.
+    - [DCTCompress](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Compression/DCTCompress/): ハフマン符号
+    - [HuffmanCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/HuffmanCHOP/): ハフマン符号のもとの論文
+- IEC (1999). Multimedia systems and equipment - Colour measurement and management - Part 2-1: Default RGB colour space - sRGB. IEC 61966-2-1:1999.
+    - [ColorConvert](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Color/ColorConvert/): sRGB のガンマと、XYZ への行列（D65）
+- ITU-T (2011). Information technology - Digital compression and coding of continuous-tone still images: JPEG File Interchange Format (JFIF). Recommendation ITU-T T.871.
+    - [ColorConvert](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Color/ColorConvert/): YCbCr（BT.601 フルレンジ）の式
+- Y. Jia, E. Shelhamer, J. Donahue, S. Karayev, J. Long, R. Girshick, S. Guadarrama, T. Darrell (2014). [Caffe: Convolutional Architecture for Fast Feature Embedding](https://doi.org/10.1145/2647868.2654889). Proc. 22nd ACM International Conference on Multimedia, 675-678.
+    - [Col2ImCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/Col2ImCHOP/): im2col / col2im という名前と処理の出どころ
+    - [Im2ColCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/Im2ColCHOP/): im2col / col2im という名前と処理の出どころ
+- Y. LeCun, C. Cortes, C. J. C. Burges. [The MNIST database of handwritten digits (ylecun/mnist)](https://huggingface.co/datasets/ylecun/mnist).
+    - [DigitClassifier](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Classify/DigitClassifier/): 重みの学習と使用例の数字の画像。MIT License
+- Y. LeCun, L. Bottou, Y. Bengio, P. Haffner (1998). [Gradient-based learning applied to document recognition](https://doi.org/10.1109/5.726791). Proceedings of the IEEE 86(11), 2278-2324.
+    - [DigitClassifier](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Classify/DigitClassifier/): MNIST を紹介した論文
+- J. Makhoul (1980). [A fast cosine transform in one and two dimensions](https://doi.org/10.1109/TASSP.1980.1163351). IEEE Transactions on Acoustics, Speech, and Signal Processing 28(1), 27-34.
+    - [DctCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/DctCHOP/): DCT-II / III を長さ N の FFT 1 回で計算する方法（この OP の計算方法）
+- B. McFee, C. Raffel, D. Liang, D. P. W. Ellis, M. McVicar, E. Battenberg, O. Nieto (2015). [librosa: Audio and Music Signal Analysis in Python](https://doi.org/10.25080/Majora-7b98e3ed-003). Proc. 14th Python in Science Conference, 18-25.
+    - [PerceptualSimilarity](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/PerceptualSimilarity/): MFCC の計算方法と既定値（librosa.feature.mfcc と同じ値になるようにしてある）
+    - [MFCC](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/MFCC/): 計算方法と既定値（librosa.feature.mfcc と同じ値になるようにしてある）
+    - [MelSpectrum](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/MelSpectrum/): メルフィルタバンク（Slaney 尺度、面積で正規化）と既定値。librosa.feature.melspectrogram と同じ値になるようにしてある
+- J. E. Pearson (1993). [Complex Patterns in a Simple System](https://doi.org/10.1126/science.261.5118.189). Science 261(5118), 189-192.
+    - [GrayScott](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Simulation/ReactionDiffusion/GrayScott/): Gray-Scott モデルの 2 次元の模様と、F・k による分類
+- PyTorch. [torch.nn.Unfold / torch.nn.Fold](https://docs.pytorch.org/docs/stable/generated/torch.nn.Unfold.html). PyTorch documentation.
+    - [Col2ImCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/Col2ImCHOP/): Fold と同じく、重なったパッチの値は足し合わせる
+    - [Im2ColCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/Im2ColCHOP/): 出力の大きさの式とパッチ内の並び順(チャンネル → 縦 → 横)を合わせた先
+- C. W. Reynolds (1999). [Steering Behaviors For Autonomous Characters](https://www.red3d.com/cwr/steer/). Proc. Game Developers Conference 1999, 763-782.
+    - [SteerRGB](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Simulation/Boid/SteerRGB/): 舵取りの力（目標の速度 − 今の速度を、最大の力で抑える）
+- C. Roads (2001). [Microsound](https://doi.org/10.7551/mitpress/4601.001.0001). MIT Press.
+    - [GranularCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/GranularCHOP/): グラニュラー合成(音を短い粒に切り、窓をかけて並べ直す)の解説
+- T. D. Sanger (1989). [Optimal unsupervised learning in a single-layer linear feedforward neural network](https://doi.org/10.1016/0893-6080(89)90044-0). Neural Networks 2(6), 459-473.
+    - [OnlineGHA](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Learning/Online/OnlineGHA/): 更新則（Sanger 則 / 一般化ヘブ則 GHA）
+- C. S. Sapp. [midifile: C++ classes for reading/writing Standard MIDI Files](https://github.com/craigsapp/midifile). GitHub.
+    - [MidiFileInCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/MidiFileInCHOP/): MIDI ファイルの読み込みに使っているライブラリ(BSD 2-Clause)
+- B. Schelling. [TinySoundFont: SoundFont2 synthesizer library in a single C/C++ file](https://github.com/schellingb/TinySoundFont). GitHub.
+    - [SoundFontSynthCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/SoundFontSynthCHOP/): SoundFont の読み込みと発音に使っているライブラリ(MIT)
+- SciPy. [scipy.fft.dct](https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.dct.html). SciPy documentation.
+    - [DctCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/DctCHOP/): DCT-I〜IV の定義と正規化（ortho / backward / forward）を合わせた先
+- C. E. Shannon (1948). [A Mathematical Theory of Communication](https://doi.org/10.1002/j.1538-7305.1948.tb01338.x). Bell System Technical Journal 27(3), 379-423.
+    - [HuffmanCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/HuffmanCHOP/): エントロピー（Info CHOP の ideal_bits_per_sample。どんな符号でもこれより短くはできない）
+- SimpleBLE. [SimpleBLE: cross-platform Bluetooth Low Energy library](https://github.com/simpleble/simpleble). GitHub.
+    - [BLEInCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/BLEInCHOP/): BLE の通信に使っているライブラリ
+- A. R. Smith (1978). [Color Gamut Transform Pairs](https://doi.org/10.1145/965139.807361). Computer Graphics (SIGGRAPH '78) 12(3), 12-19.
+    - [ColorConvert](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Color/ColorConvert/): HSV と RGB の変換
+- G. K. Wallace (1992). [The JPEG still picture compression standard](https://doi.org/10.1109/30.125072). IEEE Transactions on Consumer Electronics 38(1), xviii-xxxiv.
+    - [BlockDCT](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Compression/BlockDCT/): 8 × 8 ブロックの DCT → 量子化 → ジグザグ → 符号化の流れ
+    - [DCTCompress](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Compression/DCTCompress/): DCT → 量子化 → ジグザグ → ハフマン符号、という流れ
+    - [DCTDecompress](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Compression/DCTDecompress/): ハフマン復号 → 逆量子化 → 逆 DCT、という流れ
+    - [DCTQuantize](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Compression/DCTQuantize/): 周波数ごとにきざみ幅を変える量子化
+    - [ZigZag](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Compression/ZigZag/): ジグザグスキャンの順番
+    - [HuffmanGlitch](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Image/Effect/HuffmanGlitch/): 壊している圧縮の流れ（DCT → 量子化 → ジグザグ → ハフマン符号）
+    - [HuffmanCHOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/HuffmanCHOP/): DCT → 量子化 → ジグザグ → 0 の連続 + ハフマン符号、という流れ
+- Wikipedia. [うごくメモ帳](https://ja.wikipedia.org/wiki/うごくメモ帳). Wikipedia 日本語版.
+    - [FlipnoteTOP](https://shinh0707.github.io/TouchDesignerShareDatas/plugins/FlipnoteTOP/): 見た目のもと。DSi 版は 256×192 で黒・白・赤・青、3DS 版は 320×240 で色が増える。任天堂の製品で、このプラグインは公式のものではありません
+- A. Wright. [amp-emulation-metrics（論文のコードとデモ）](https://github.com/Alec-Wright/amp-emulation-metrics).
+    - [MFCCDistance](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/MFCCDistance/): 距離の実装（差の絶対値を全係数・全フレームで平均）
+    - [PerceptualSimilarity](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/PerceptualSimilarity/): 距離と評価の予測の実装
+    - [SimilarityRating](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/SimilarityRating/): 評価の予測の実装（utils/sim_pred.py）
+- A. Wright, G. Dal Santo, S. J. Schlecht (2026). [Predicting Subjective Ratings of Guitar Amplifier Emulations](https://doi.org/10.17743/jaes.2026.0304). J. Audio Eng. Soc. 74(10), 762-772.
+    - [MFCCDistance](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/MFCCDistance/): MFCC の L1 距離が聴取評価によく合うこと（式 8、図 7）
+    - [PerceptualSimilarity](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/PerceptualSimilarity/): 方法の全体（MFCC の L1 距離 → 折れ線で評価を予測）と定数
+    - [SimilarityRating](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Feature/SimilarityRating/): 折れ線モデルと既定値（Slope, Knee, Bound。表 3）
+    - [MFCC](https://shinh0707.github.io/TouchDesignerShareDatas/palettes/Audio/Spectrum/MFCC/): MFCC の差が聴いたときの音色の違いによく合うこと
